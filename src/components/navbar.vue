@@ -47,7 +47,7 @@
         },
         methods: {
             handleScroll() {
-                this.hasScrolled = window.scrollY > 100;
+                this.hasScrolled = window.scrollY > 80;
             }
         }
     }
