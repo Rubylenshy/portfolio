@@ -4,8 +4,8 @@
         
             <!-- If you give me some credit or shoutout here by linking to my website, then it will be a big thing for me and will help me a lot :) -->
             <div class="">
-                &copy; Copyright 2021. Inspired by
-                <a rel="noreferrer" target="_blank" href="https://rammaheshwari.com">Ram Maheshwari</a>
+                &copy; Copyright 2024. All Rights Reserved.
+                <br> Inspired by <a rel="noreferrer" target="_blank" href="https://rammaheshwari.com"><cite>Ram Maheshwari</cite></a>
             </div>
         </div>
     </footer>
