@@ -18,6 +18,11 @@
     <div class="">
         <nav-bar />
 
+        <div class="home-page page-content">
+            <section class="home-hero">
+            </section>
+        </div>
+
         <footer-comp />
     </div>
 </template>
