@@ -51,7 +51,7 @@
 </script>
 
 <template>
-    <div class="">
+    <div class="position-relative">
         <nav-bar />
 
         <div class="home-page">
@@ -59,9 +59,13 @@
                 <div class="home-hero-content position-relative mh-100vh">
                     <div id="hero-header" class="home-hero-header text-center fw-black" v-html="headerName"></div>
 
+                    <div class="hero-descriptions d-flex gap-4">
+                        <p></p>
+                        <p></p>
+                    </div>
 
                     <div class="hero-bottom-links">
-                        <ul class="d-flex gap-5">
+                        <ul class="d-flex flex-column flex-md-row gap-3 gap-lg-5">
                             <li v-for="link in socialLinks" :key="link">
                                 <img :src="link.src" :alt="link.alt">
                             </li>
@@ -69,10 +73,9 @@
                     </div>
                 </div>
             </section>
-
-            <section-header title="articles" sub-title="quick tips & tricks" />
         </div>
-
-        <footer-comp />
     </div>
+
+    <section-header title="articles" sub-title="quick tips & tricks" />
+    <footer-comp />
 </template>

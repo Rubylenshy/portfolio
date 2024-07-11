@@ -1,24 +1,27 @@
 <template>
-    <header>
-        <nav class="nav-bar">
-            <div class="navbar-desktop d-flex justify-content-between align-items-center shadow-sm" :class="{'animate-navbar': hasScrolled}">
-                <div class="header-image">
-                    <img src="../assets/images/logo1.png" width="30" alt="Ree.dev">
-                </div>
-                <div class="nav-links">
-                    <ul class="d-flex nav-links-lists fw-semibold gap-5">
-                        <li v-for="link in navLinks" :key="link.value">
-                            <a href="#" rel="noopener noreferrer">{{ link.label }}</a>
-                        </li>
-                    </ul>
-                </div>
+    <nav class="nav-bar">
+        <div class="navbar-desktop d-none d-md-flex justify-content-between align-items-center shadow-sm" :class="{'animate-navbar': hasScrolled}">
+            <div class="header-image">
+                <img src="../assets/images/logo1.png" width="30" alt="Ree.dev">
             </div>
+            <div class="nav-links">
+                <ul class="d-flex nav-links-lists fw-semibold gap-4 gap-xl-5">
+                    <li v-for="link in navLinks" :key="link.value">
+                        <a href="#" rel="noopener noreferrer">{{ (link.label).toUpperCase() }}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-            <div class="navbar-mobile">
-                
-            </div>
-        </nav>
-    </header>
+        <div class="navbar-mobile d-flex d-md-none">
+            <ul class="d-flex nav-links-lists gap-3">
+                <i class="bi bi-filetype-pdf"></i>
+                <li v-for="link in navLinks" :key="link.value">
+                    <a class="text-nowrap" href="#" rel="noopener noreferrer">{{ link.label }}</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 </template>
 
 <script>
@@ -30,17 +33,17 @@
         data() {
             return {
                 navLinks: [
-                    {label: 'HOME', value: 'home'},
-                    {label: 'ABOUT ME', value: 'about-me'},
-                    {label: 'PROJECTS', value: 'projects'},
-                    {label: 'CONTACT', value: 'contact'},
-                    {label: 'ARTICLES', value: 'articles'},
+                    {label: 'Home', value: 'home'},
+                    {label: 'About', value: 'about'},
+                    {label: 'Projects', value: 'projects'},
+                    {label: 'Contact', value: 'contact'},
+                    // {label: 'Articles', value: 'articles'}
                 ],
                 hasScrolled: false
             }
         },
         mounted() {
-        window.addEventListener('scroll', this.handleScroll);
+            window.addEventListener('scroll', this.handleScroll);
         },
         beforeUnmount() {
             window.removeEventListener('scroll', this.handleScroll);
