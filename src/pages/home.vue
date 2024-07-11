@@ -15,6 +15,7 @@
         },
         data() {
             return {
+                headerName: '',
                 socialLinks: [
                     { src: require('../assets/svg/twitter.svg'), alt: 'Twitter' },
                     { src: require('../assets/svg/frontendmentor.svg'), alt: 'Frontend Mentor' },
@@ -23,6 +24,28 @@
                     { src: require('../assets/svg/linkedin.svg'), alt: 'LinkedIn' }
                 ]
             }
+        },
+        methods: {
+            typeText(text) {
+                let speed = 50;
+                let i = 0;
+
+                if (i < text.length) {
+                    document.getElementById("hero-header").innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(this.typeText, speed);
+                }
+            }
+        },
+        mounted() {
+            const heroHeader = document.getElementById("hero-header");
+            setTimeout(() => {
+                this.headerName = `REUBEN <br> OLUWAFEMI`
+    
+                if (heroHeader) {
+                    heroHeader.classList.add("animate");
+                }
+            }, 2000);
         },
     }
 </script>
@@ -34,7 +57,7 @@
         <div class="home-page">
             <section class="home-hero mh-100vh">
                 <div class="home-hero-content position-relative mh-100vh">
-                    <div class="home-hero-header text-center fw-black">REUBEN <br> OLUWAFEMI</div>
+                    <div id="hero-header" class="home-hero-header text-center fw-black" v-html="headerName"></div>
 
 
                     <div class="hero-bottom-links">
