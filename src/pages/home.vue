@@ -56,12 +56,15 @@
 
         <div class="home-page">
             <section class="home-hero mh-100vh">
+                <div class="d-flex d-md-none justify-content-between py-2 px-3 pt-4">
+                    <a href="#"><img src="../assets/images/logo1.png" alt="Reuben Oluwafemi" style="width: 35px; height: 35px;"/></a>
+                    <button class="btn btn-transparent"><i class="bi bi-circle-half text-light"></i></button>
+                </div>
                 <div class="home-hero-content position-relative mh-100vh">
                     <div id="hero-header" class="home-hero-header text-center fw-black" v-html="headerName"></div>
 
-                    <div class="hero-descriptions d-flex gap-4">
-                        <p></p>
-                        <p></p>
+                    <div class="hero-descriptions d-flex flex-column flex-md-row text-light gap-4">
+                        <p>I'm a frontend developer, and JavaScript engineer. I spend my days (and often nights) painting the Internet canvas with projects and lines of code</p>
                     </div>
 
                     <div class="hero-bottom-links">

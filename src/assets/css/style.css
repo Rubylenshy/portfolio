@@ -12,7 +12,8 @@
     --fst-normal: normal;
     --fst-italic: italic;
 
-    --clr-bisque: rgb(239, 211, 177);
+    --clr-bisque-400: rgb(239, 211, 177);
+    --clr-bisque-300: rgb(241, 219, 192);
 }
 ul{
     list-style-type: none;
@@ -107,6 +108,7 @@ a{
         backdrop-filter: blur(8px);
 
         .hero-descriptions p{
+            color: var(--clr-bisque-300);
             max-width: 250px;
         }
 
@@ -162,5 +164,19 @@ a{
         left: 50%;
         transform: translateX(-50%);
         z-index: 999;
+    }
+
+    .home-hero-content{
+        padding-top: 60px !important;
+
+        .hero-descriptions{
+            padding: 30px 15px;
+
+            p{
+                max-width: unset !important;
+                font-size: 0.85rem;
+            }
+        }
+        
     }
 }
