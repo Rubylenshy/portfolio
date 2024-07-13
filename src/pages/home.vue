@@ -1,14 +1,14 @@
 <script>
     import NavBar from "../components/navbar.vue";
     import FooterComp from "../components/footer.vue";
-    import SectionHeader from "../components/section-header.vue";
+    import ProjectListing from "../components/project-listing.vue";
 
     export default {
         name: 'HomeView',
         components: {
             NavBar,
             FooterComp,
-            SectionHeader
+            ProjectListing
         },
         props: {
             
@@ -22,6 +22,38 @@
                     { src: require('../assets/svg/github-white.svg'), alt: 'GitHub' },
                     { src: require('../assets/svg/slack.svg'), alt: 'Slack' },
                     { src: require('../assets/svg/linkedin.svg'), alt: 'LinkedIn' }
+                ], 
+                projects: [
+                    {
+                        title: 'Project One',
+                        sub_title: 'A brief subtitle',
+                        desc: 'A detailed description of what Project One is about. A detailed description of what Project One is about.',
+                        image: require('../assets/svg/github.svg'),
+                        alt: 'An image representing Project One',
+                        github_link: 'https://github.com/user/project-one',
+                        live_link: 'https://live-link-to-project-one.com',
+                        skills: ['JavaScript', 'HTML', 'CSS']
+                    },
+                    {
+                        title: 'Project Two',
+                        sub_title: 'A brief subtitle',
+                        desc: 'A detailed description of what Project Two is about. A detailed description of what Project Two is about.',
+                        image: require('../assets/svg/github.svg'),
+                        alt: 'An image representing Project Two',
+                        github_link: 'https://github.com/user/project-two',
+                        live_link: 'https://live-link-to-project-two.com',
+                        skills: ['Python', 'Django', 'PostgreSQL']
+                    },
+                    {
+                        title: 'Project Three',
+                        sub_title: 'A brief subtitle',
+                        desc: 'A detailed description of what Project Three is about. A detailed description of what Project Three is about.',
+                        image: require('../assets/svg/github.svg'),
+                        alt: 'An image representing Project Three',
+                        github_link: 'https://github.com/user/project-three',
+                        live_link: 'https://live-link-to-project-three.com',
+                        skills: ['React', 'Node.js', 'MongoDB']
+                    }
                 ]
             }
         },
@@ -79,6 +111,10 @@
         </div>
     </div>
 
-    <section-header title="articles" sub-title="quick tips & tricks" />
+    <section class="projects">
+        <div v-for="project in projects" :key="project.title" class="project-items mx-3 my-4">
+            <project-listing :project="project" />
+        </div>
+    </section>
     <footer-comp />
 </template>
