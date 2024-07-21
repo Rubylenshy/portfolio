@@ -112,5 +112,29 @@
             <project-listing :project="project" />
         </div>
     </section>
+
+    <section>
+        <div class="phone-edge">
+            <div class="phone-screen position-relative">
+                <div class="chat-head">
+                    <div class="camera-box"></div>
+                    <div class="head"><span id="back">⟨</span>
+                        <img  id="avatar" src="" alt="Samuel Green" height="20" width="20">
+                        <div class="chat-name">
+                            <header>Reuben Oluwafemi</header>
+                            <span>Available</span>
+                        </div>
+                        <img id="dots" src="" alt="">
+                    </div>
+                </div>
+                <div class="chat-body">
+                </div>
+                <div class="chat-input position-absolute bottom-0">
+                    <input class="border-0" type="text" placeholder="Type a message…" /><span><i class="bi bi-arrow-right fs-6"></i></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer-comp :social-links="socialLinks"/>
 </template>
