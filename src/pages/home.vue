@@ -57,24 +57,29 @@
                 ]
             }
         },
+        computed: {
+        },
         methods: {
             isInViewport(el) {
-                const container = this.$refs.homePage
-                const elRect = el.getBoundingClientRect()
-                const containerRect = container.getBoundingClientRect()
+                const { top, left, bottom, right } = el.getBoundingClientRect();
+                const { innerHeight, innerWidth } = window;
 
-                return elRect.top >= containerRect.top && elRect.bottom <= containerRect.bottom
+                return top >= 0 && left >= 0 && bottom <= innerHeight && right <= innerWidth;
             },
             handleScale() {
-                const contactContainer = this.$refs.contact;
-
-                if (this.isInViewport(contactContainer)) {
-
-                    console.log(contactContainer, 'in-view');
+                const contact = this.$refs.contact;
+                if (this.isInViewport(contact)) {
+                    setTimeout(() => {
+                        contact.classList.add('scale-phone')
+                    }, 1000);
                 }
+
+                contact.classList.remove('scale-phone')
             }
         },
         mounted() {
+            window.addEventListener('scroll', this.handleScale);
+
             const heroHeader = document.getElementById("hero-header");
             setTimeout(() => {
                 this.headerName = `REUBEN <br> OLUWAFEMI`
@@ -83,12 +88,9 @@
                     heroHeader.classList.add('animate')
                 }
             }, 3000);
-
-            window.addEventListener('scroll', this.handleScale());
-            console.log(this.$refs.contact);
         },
         beforeUnmount() {
-            window.removeEventListener('scroll', this.handleScale());
+            window.removeEventListener('scroll', this.handleScale);
         }
     }
 </script>

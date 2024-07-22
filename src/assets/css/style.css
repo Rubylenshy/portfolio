@@ -195,6 +195,16 @@ p{
     }
 }
 
+/* Contact */
+.contact{
+    transition: all 1s;
+    transform: scale(100%);
+
+    &.scale-phone{
+        transform: scale(1.5) translateY(-50px);
+    }
+}
+
 /* Footer */
 .footer{
     background-color: #f5f5f5;
