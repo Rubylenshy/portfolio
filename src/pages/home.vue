@@ -58,6 +58,21 @@
             }
         },
         methods: {
+            isInViewport(el) {
+                const container = this.$refs.homePage
+                const elRect = el.getBoundingClientRect()
+                const containerRect = container.getBoundingClientRect()
+
+                return elRect.top >= containerRect.top && elRect.bottom <= containerRect.bottom
+            },
+            handleScale() {
+                const contactContainer = this.$refs.contact;
+
+                if (this.isInViewport(contactContainer)) {
+
+                    console.log(contactContainer, 'in-view');
+                }
+            }
         },
         mounted() {
             const heroHeader = document.getElementById("hero-header");
@@ -65,15 +80,20 @@
                 this.headerName = `REUBEN <br> OLUWAFEMI`
     
                 if (heroHeader) {
-                    this.$refs.heroContent.classList.add('animate')
+                    this.$refs.heroHeader.classList.add('animate')
                 }
             }, 3000);
+
+            window.addEventListener('scroll', this.handleScale());
         },
+        beforeUnmount() {
+            window.removeEventListener('scroll', this.handleScale());
+        }
     }
 </script>
 
 <template>
-    <div class="position-relative">
+    <div ref="homePage" class="position-relative">
         <nav-bar />
 
         <div class="home-page">
@@ -86,13 +106,16 @@
                     <div id="hero-header" class="home-hero-header text-center fw-black" v-html="headerName"></div>
 
                     <div class="p-3">
-                        <div class="home-headshot text-center p-4">
+                        <div class="home-headshot d-flex justify-content-around align-items-end gap-3 p-4">
+                            <div class="hero-descriptions d-flex flex-column flex-md-row text-light gap-4">
+                                <p>I'm a frontend developer, and JavaScript engineer.</p>
+                            </div>
                             <img src="../assets/images/headshot.jpg" alt="Reuben Oluwafemi" />
+                            <div class="hero-descriptions d-flex flex-column flex-md-row text-light gap-4">
+                                <p>I spend my days (and often nights) painting the Internet canvas with projects and lines of code</p>
+                            </div>
                         </div>
     
-                        <div class="hero-descriptions d-flex flex-column flex-md-row text-light gap-4">
-                            <p>I'm a frontend developer, and JavaScript engineer. I spend my days (and often nights) painting the Internet canvas with projects and lines of code</p>
-                        </div>
                     </div>
 
                     <div class="hero-bottom-links">
@@ -113,7 +136,7 @@
         </div>
     </section>
 
-    <section>
+    <section ref="contact" class="contact">
         <div class="phone-edge">
             <div class="phone-screen position-relative">
                 <div class="chat-head">
