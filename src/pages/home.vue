@@ -80,11 +80,12 @@
                 this.headerName = `REUBEN <br> OLUWAFEMI`
     
                 if (heroHeader) {
-                    this.$refs.heroHeader.classList.add('animate')
+                    heroHeader.classList.add('animate')
                 }
             }, 3000);
 
             window.addEventListener('scroll', this.handleScale());
+            console.log(this.$refs.contact);
         },
         beforeUnmount() {
             window.removeEventListener('scroll', this.handleScale());
@@ -106,11 +107,11 @@
                     <div id="hero-header" class="home-hero-header text-center fw-black" v-html="headerName"></div>
 
                     <div class="p-3">
-                        <div class="home-headshot d-flex justify-content-around align-items-end gap-3 p-4">
+                        <div class="home-headshot d-flex align-items-end p-4">
                             <div class="hero-descriptions d-flex flex-column flex-md-row text-light gap-4">
                                 <p>I'm a frontend developer, and JavaScript engineer.</p>
                             </div>
-                            <img src="../assets/images/headshot.jpg" alt="Reuben Oluwafemi" />
+                            <img class="mx-auto" src="../assets/images/headshot.jpg" alt="Reuben Oluwafemi" />
                             <div class="hero-descriptions d-flex flex-column flex-md-row text-light gap-4">
                                 <p>I spend my days (and often nights) painting the Internet canvas with projects and lines of code</p>
                             </div>

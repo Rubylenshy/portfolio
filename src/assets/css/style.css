@@ -141,13 +141,20 @@ p{
         font-size: clamp(2.5rem, -1rem + 10vw, 12rem);
         color: #efd3b1;
         line-height: .75em;
+        display: none;
+
+        &.animate{
+            animation: fade-bottom-top 2s;
+            display: block;
+        }
     }
     
     .home-hero-content{
         padding-top: 120px;
         -webkit-backdrop-filter: blur(12px);
         backdrop-filter: blur(8px);
-        display: none;
+
+        
 
         .hero-descriptions p{
             color: var(--clr-bisque-300);
@@ -174,11 +181,6 @@ p{
             width: 100%;
             border-radius: 15px;
             object-fit: contain;
-        }
-
-        &.animate{
-            animation: fade-bottom-top 2s;
-            display: block;
         }
     }
 }
@@ -309,8 +311,8 @@ p{
     display: flex;
     font-size: 12px;
     background-color: white;
-    border-radius: 20px;
-    width: 100%;
+    border-radius: 15px;
+    margin: 5px;
     animation: opacity 1.5s;
 
     input{
