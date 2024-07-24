@@ -109,12 +109,12 @@
                     <div id="hero-header" class="home-hero-header text-center fw-black" v-html="headerName"></div>
 
                     <div class="p-3">
-                        <div class="home-headshot d-flex flex-column flex-md-row align-items-end p-4">
-                            <div class="hero-descriptions d-flex order-1 order-md-0 text-light gap-4">
+                        <div class="home-headshot d-flex flex-column flex-md-row align-items-end text-light p-4">
+                            <div class="order-1 order-md-0">
                                 <p>I'm a frontend developer, and JavaScript engineer.</p>
                             </div>
                             <img class="mx-auto order-0 order-md-1" src="../assets/images/headshot.jpg" alt="Reuben Oluwafemi" />
-                            <div class="hero-descriptions d-flex order-2 text-light gap-4">
+                            <div class="order-2">
                                 <p>I spend my days (and often nights) painting the Internet canvas with projects and lines of code</p>
                             </div>
                         </div>
@@ -133,7 +133,7 @@
         </div>
     </div>
 
-    <section class="projects">
+    <section class="projects py-5">
         <div v-for="project in projects" :key="project.title" class="project-items mx-3 my-4">
             <project-listing :project="project" />
         </div>
