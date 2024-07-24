@@ -28,7 +28,7 @@
                         title: 'Project One',
                         sub_title: 'A brief subtitle',
                         desc: 'A detailed description of what Project One is about. A detailed description of what Project One is about.',
-                        image: require('../assets/svg/github.svg'),
+                        image: require('../assets/images/project-temp.jpeg'),
                         alt: 'An image representing Project One',
                         github_link: 'https://github.com/user/project-one',
                         live_link: 'https://live-link-to-project-one.com',
@@ -38,7 +38,7 @@
                         title: 'Project Two',
                         sub_title: 'A brief subtitle',
                         desc: 'A detailed description of what Project Two is about. A detailed description of what Project Two is about.',
-                        image: require('../assets/svg/github.svg'),
+                        image: require('../assets/images/project-temp.jpeg'),
                         alt: 'An image representing Project Two',
                         github_link: 'https://github.com/user/project-two',
                         live_link: 'https://live-link-to-project-two.com',
@@ -48,7 +48,7 @@
                         title: 'Project Three',
                         sub_title: 'A brief subtitle',
                         desc: 'A detailed description of what Project Three is about. A detailed description of what Project Three is about.',
-                        image: require('../assets/svg/github.svg'),
+                        image: require('../assets/images/project-temp.jpeg'),
                         alt: 'An image representing Project Three',
                         github_link: 'https://github.com/user/project-three',
                         live_link: 'https://live-link-to-project-three.com',
@@ -109,12 +109,12 @@
                     <div id="hero-header" class="home-hero-header text-center fw-black" v-html="headerName"></div>
 
                     <div class="p-3">
-                        <div class="home-headshot d-flex align-items-end p-4">
-                            <div class="hero-descriptions d-flex flex-column flex-md-row text-light gap-4">
+                        <div class="home-headshot d-flex flex-column flex-md-row align-items-end p-4">
+                            <div class="hero-descriptions d-flex order-1 order-md-0 text-light gap-4">
                                 <p>I'm a frontend developer, and JavaScript engineer.</p>
                             </div>
-                            <img class="mx-auto" src="../assets/images/headshot.jpg" alt="Reuben Oluwafemi" />
-                            <div class="hero-descriptions d-flex flex-column flex-md-row text-light gap-4">
+                            <img class="mx-auto order-0 order-md-1" src="../assets/images/headshot.jpg" alt="Reuben Oluwafemi" />
+                            <div class="hero-descriptions d-flex order-2 text-light gap-4">
                                 <p>I spend my days (and often nights) painting the Internet canvas with projects and lines of code</p>
                             </div>
                         </div>
