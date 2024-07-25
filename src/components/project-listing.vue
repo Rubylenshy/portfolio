@@ -28,7 +28,7 @@ export default {
 
 <template>
     <div class="project-listing d-flex flex-column flex-md-row justify-content-md-center">
-        <div class="project-info d-flex flex-column p-3">
+        <div class="project-info d-flex flex-column order-1 order-md-0 p-3">
             <div class="d-flex flex-column flex-md-row justify-content-between gap-3">
                 <div class="section-header">
                     <h2 class="title fw-bold m-0">{{project.title}}</h2>
@@ -53,6 +53,6 @@ export default {
             </div>
         </div>
 
-        <div :style="backgroundImageStyle" class="project-image"></div>
+        <div :style="backgroundImageStyle" class="project-image order-0 order-md-1"></div>
     </div>
 </template>
