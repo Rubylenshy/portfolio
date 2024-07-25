@@ -13,11 +13,21 @@ export default {
             
         }
     },
+    computed: {
+        backgroundImageStyle() {
+            return {
+                backgroundImage: `url(${this.project.image})`,
+                backgroundPosition: 'top center',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+            };
+        }
+    }
 }
 </script>
 
 <template>
-    <div class="project-listing d-flex flex-column flex-md-row gap-md-4">
+    <div class="project-listing d-flex flex-column flex-md-row justify-content-md-center">
         <div class="project-info d-flex flex-column p-3">
             <div class="d-flex flex-column flex-md-row justify-content-between gap-3">
                 <div class="section-header">
@@ -27,10 +37,10 @@ export default {
                 <div class="project-links d-flex justify-content-end gap-3">
                     <a class="d-flex align-items-center justify-content-center btn a-btn round" :href="project.github_link"><i class="bi bi-github"></i></a>
                     <a class="d-flex btn a-btn" :href="project.live_link">
-                        <span>
-                            <i class="bi bi-link"></i>
+                        <span class="d-flex text-nowrap">
+                            <i class="bi bi-link me-2"></i>
                             Visit Project
-                            <i class="bi bi-link"></i>
+                            <i class="bi bi-link ms-2"></i>
                         </span>
                     </a>
                 </div>
@@ -43,6 +53,6 @@ export default {
             </div>
         </div>
 
-        <img :src="project.image" :alt="project.alt">
+        <div :style="backgroundImageStyle" class="project-image"></div>
     </div>
 </template>

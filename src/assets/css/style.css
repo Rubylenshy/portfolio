@@ -59,6 +59,10 @@ p{
 .project-listing{
     color: #fff;
 
+    &:hover .project-image::after{
+        opacity: 0;
+    }
+
     .project-info{
         background-color: #3b3c3c;
         /* border-radius: 15px 15px 0 0; */
@@ -86,7 +90,7 @@ p{
         }
     }
     .a-btn:not(.round){
-        min-width: 180px;
+        width: 170px;
         overflow: hidden;
         
         span{
@@ -95,13 +99,24 @@ p{
         }
 
         &:hover span{
-            transform: translateX(20px);
+            transform: translateX(-30px);
         }
     }
-    img{
-        max-width: 350px;
-        /* border-radius: 0 0 15px 15px; */
-        object-fit: contain;
+    .project-image{
+        width: 600px;
+        position: relative;
+
+        &::after{
+            background: linear-gradient(to bottom right, #f8e3a5, #617d98);
+            content: "";
+            height: 100%;
+            left: 0;
+            opacity: .85;
+            position: absolute;
+            top: 0;
+            transition: all .4s linear;
+            width: 100%;
+        }
     }
 }
 
@@ -275,6 +290,13 @@ p{
             }
         }
         
+    }
+
+    .project-listing{
+        .project-image{
+            height: 250px !important;
+            width: 100% !important;
+        }
     }
 
     .footer{
