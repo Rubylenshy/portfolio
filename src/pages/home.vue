@@ -67,14 +67,14 @@
                 return top >= 0 && left >= 0 && bottom <= innerHeight && right <= innerWidth;
             },
             handleScale() {
-                const contact = this.$refs.contact;
-                if (this.isInViewport(contact)) {
-                    setTimeout(() => {
-                        contact.classList.add('scale-phone')
-                    }, 1000);
-                }
+                // const contact = this.$refs.contact;
+                // if (this.isInViewport(contact)) {
+                //     setTimeout(() => {
+                //         contact.classList.add('scale-phone')
+                //     }, 1000);
+                // }
 
-                contact.classList.remove('scale-phone')
+                // contact.classList.remove('scale-phone')
             }
         },
         mounted() {
