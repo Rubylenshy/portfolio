@@ -17,12 +17,13 @@
             return {
                 headerName: '',
                 socialLinks: [
-                    { src: require('../assets/svg/twitter.svg'), alt: 'Twitter' },
-                    { src: require('../assets/svg/frontendmentor.svg'), alt: 'Frontend Mentor' },
-                    { src: require('../assets/svg/github-white.svg'), alt: 'GitHub' },
-                    { src: require('../assets/svg/slack.svg'), alt: 'Slack' },
-                    { src: require('../assets/svg/linkedin.svg'), alt: 'LinkedIn' }
-                ], 
+                    { name: 'Twitter', icon: 'fa-brands fa-x-twitter', href: 'https://twitter.com/yourusername' },
+                    { name: 'Frontend Mentor', icon: 'fa-brands fa-codepen', href: 'https://www.frontendmentor.io/profile/yourusername' },
+                    { name: 'GitHub', icon: 'fa-brands fa-github', href: 'https://github.com/Rubylenshy' },
+                    { name: 'Slack', icon: 'fa-brands fa-slack', href: 'https://slack.com' },
+                    { name: 'LinkedIn', icon: 'fa-brands fa-linkedin', href: 'https://www.linkedin.com/in/yourusername/' },
+                    { name: 'Email', icon: 'fa-solid fa-envelope', href: 'mailto:youremail@example.com' }
+                ],
                 projects: [
                     {
                         title: 'Project One',
@@ -54,6 +55,16 @@
                         live_link: 'https://live-link-to-project-three.com',
                         skills: ['React', 'Node.js', 'MongoDB']
                     }
+                ],
+                skillsets: [
+                    { name: 'ReactJS', icon: 'fa-react' },
+                    { name: 'VueJS', icon: 'fa-vuejs' },
+                    { name: 'NodeJS', icon: 'fa-node-js' },
+                    { name: 'JavaScript', icon: 'fa-js' },
+                    { name: 'Git', icon: 'fa-git-alt' },
+                    { name: 'Sass', icon: 'fa-sass' },
+                    { name: 'Bootstrap', icon: 'fa-bootstrap' },
+                    { name: 'PHP', icon: 'fa-php' }
                 ]
             }
         },
@@ -66,32 +77,19 @@
 
                 return top >= 0 && left >= 0 && bottom <= innerHeight && right <= innerWidth;
             },
-            handleScale() {
-                // const contact = this.$refs.contact;
-                // if (this.isInViewport(contact)) {
-                //     setTimeout(() => {
-                //         contact.classList.add('scale-phone')
-                //     }, 1000);
-                // }
-
-                // contact.classList.remove('scale-phone')
-            }
         },
         mounted() {
-            window.addEventListener('scroll', this.handleScale);
-
-            const heroHeader = document.getElementById("hero-header");
-            setTimeout(() => {
-                this.headerName = `REUBEN <br> OLUWAFEMI`
+            this.headerName = `REUBEN <br> OLUWAFEMI`
+            
+            // const heroHeader = document.getElementById("hero-header");
+            // setTimeout(() => {
+            //     this.headerName = `REUBEN <br> OLUWAFEMI`
     
-                if (heroHeader) {
-                    heroHeader.classList.add('animate')
-                }
-            }, 3000);
+            //     if (heroHeader) {
+            //         heroHeader.classList.add('animate')
+            //     }
+            // }, 3000);
         },
-        beforeUnmount() {
-            window.removeEventListener('scroll', this.handleScale);
-        }
     }
 </script>
 
@@ -103,30 +101,31 @@
             <section class="home-hero h-100vh">
                 <div class="d-flex d-md-none justify-content-between py-2 px-3 pt-4">
                     <a href="#"><img src="../assets/images/logo1.png" alt="Reuben Oluwafemi" style="width: 35px; height: 35px;"/></a>
-                    <button class="btn btn-transparent"><i class="bi bi-circle-half text-light"></i></button>
+                    <div class="d-flex align-items-center gap-3">
+                        <a href="#"><i class="fa-regular fa-lightbulb fs-5 text-light"></i></a>
+                        <a href="https://github.com/Rubylenshy"><i class="fa-brands fa-github fs-5 text-light"></i></a>
+                    </div>
                 </div>
                 <div ref="heroContent" class="home-hero-content position-relative mh-100vh">
                     <div id="hero-header" class="home-hero-header text-center fw-black" v-html="headerName"></div>
 
-                    <div class="p-3">
-                        <div class="home-headshot d-flex flex-column flex-md-row align-items-end text-light p-4">
-                            <div class="order-1 order-md-0">
-                                <p>I'm a frontend developer, and JavaScript engineer.</p>
-                            </div>
-                            <img class="mx-auto order-0 order-md-1" src="../assets/images/headshot.jpg" alt="Reuben Oluwafemi" />
-                            <div class="order-2">
-                                <p>I spend my days (and often nights) painting the Internet canvas with projects and lines of code</p>
-                            </div>
+                    <div class="home-headshot p-3">
+                        <img class="d-flex mx-auto" src="../assets/images/headshot.jpg" alt="Reuben Oluwafemi" />
+                        <div class="d-none d-md-flex flex-column flex-md-row justify-content-between p-4">
+                            <p>I'm a frontend developer, and JavaScript engineer.</p>
+                            <p>Making contributions to communities in building problem-solving products</p>
                         </div>
-    
-                    </div>
-
-                    <div class="hero-bottom-links">
-                        <ul class="d-flex flex-column flex-md-row gap-3 gap-lg-5">
-                            <li v-for="link in socialLinks" :key="link">
-                                <img :src="link.src" :alt="link.alt">
-                            </li>
-                        </ul>
+                        <div class="d-block d-md-none pt-3">
+                            <p class="small-screen-header">I'm a frontend developer, and JavaScript engineer.</p>
+                            <ul class="skillsets d-flex gap-3 mb-3 text-muted overflow-scroll">
+                                <li v-for="skill in skillsets" :key="skill.name" class="d-flex align-items-center gap-2">
+                                    <i class="fa-brands fs-5" :class="[skill.icon]"></i>
+                                    <span>{{ skill.name }}</span>
+                                </li>
+                            </ul>
+                            <p>My insatiable curiosity and open-mindedness drive me to continually explore new horizons.
+                            Currently, I'm eager to apply my diverse skill set to the field of Finance Analysis and Statistics.</p>
+                        </div>
                     </div>
                 </div>
             </section>

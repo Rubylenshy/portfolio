@@ -12,9 +12,11 @@
     --fst-normal: normal;
     --fst-italic: italic;
 
+    --clr-bisque-600: rgb(202, 163, 114);
     --clr-bisque-400: rgb(239, 211, 177);
     --clr-bisque-300: rgb(241, 219, 192);
 }
+
 ul{
     list-style-type: none;
     margin: 0;
@@ -26,10 +28,11 @@ a{
     transition: all .4s;
 }
 p{
-    font-size: clamp(0.85rem, 2vw, 1.25rem);
+    font-size: clamp(0.85rem, 2vw, 1.05rem);
 }
 .mh-100vh{
-    min-height: 100vh;
+    height: 100vh;
+    max-height: 800px;
 }
 .a-btn{
     height: 40px;
@@ -174,10 +177,10 @@ p{
     .home-hero-header{
         font-family: var(--ff-monseal);
         font-weight: 900;
-        font-size: clamp(2.5rem, -1rem + 10vw, 12rem);
+        font-size: clamp(2.5rem, 10vw, 12rem);
         color: #efd3b1;
         line-height: .75em;
-        display: none;
+        /* display: none; */
 
         &.animate{
             animation: fade-bottom-top 2s;
@@ -186,28 +189,33 @@ p{
     }
     
     .home-hero-content{
+        max-width: 1700px;
+        margin: 0 auto;
         padding-top: 120px;
         -webkit-backdrop-filter: blur(12px);
         backdrop-filter: blur(8px);
 
-        
+        .home-headshot {
+            gap: 0 20px;
 
-        .home-headshot p{
-            color: var(--clr-bisque-300);
-            max-width: 250px;
-        }
+            p{
+                color: var(--clr-bisque-300);
+                font-weight: 500;
+                font-size: 1.05rem;
+                max-width: 400px;
+            }
+            p:nth-child(2){
+                text-align: right;
+            }
 
-        .hero-bottom-links{
-            position: absolute;
-            padding: 15px 25px;
-            border-radius: 15px;
-            bottom: 30px;
-            right: 30px;
-    
-            img{
-                cursor: pointer;
-                width: 25px;
-                height: 25px;
+            .small-screen-header{
+                font-size: 2rem;
+                font-weight: 800;
+                letter-spacing: -0.05rem;
+                line-height: 1;
+                background-image: linear-gradient(to right, #f7d5ac, #feb49f, #ff9a7e );
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
             }
         }
 
@@ -236,21 +244,21 @@ p{
     background-color: #a1a0a0;
 }
 
-/* Contact */
-.contact{
-    transition: all 1s;
-    transform: scale(100%);
-
-    &.scale-phone{
-        transform: scale(1.5) translateY(-50px);
-    }
-}
-
 /* Footer */
 .footer{
     background-color: #f5f5f5;
     color: #757575;
     padding: 40px 5%;
+
+    .footer-links{
+        a {
+            color: #757575;
+
+            &:hover{
+                color: var(--clr-bisque-400);
+            }
+        }
+    }
 }
 
 
@@ -278,6 +286,7 @@ p{
 
     .home-hero-content{
         padding-top: 60px !important;
+        min-height: unset;
 
         .home-headshot{
             img{
