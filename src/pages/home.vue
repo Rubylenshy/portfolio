@@ -132,6 +132,27 @@
         </div>
     </div>
 
+    <section class="about-me p-3 my-4">
+        <div class="info-grid d-grid">
+            <div class="grid-item">
+                <h2>23</h2>
+                <span>Years Old</span>
+            </div>
+            <div class="grid-item">
+                <h2>23</h2>
+                <span>Years Old</span>
+            </div>
+            <div class="grid-item">
+                <h2>23</h2>
+                <span>Years Old</span>
+            </div>
+            <div class="grid-item">
+                <h2>23</h2>
+                <span>Years Old</span>
+            </div>
+        </div>
+    </section>
+
     <section class="projects py-5">
         <div v-for="project in projects" :key="project.title" class="project-items mx-3 my-4">
             <project-listing :project="project" />
