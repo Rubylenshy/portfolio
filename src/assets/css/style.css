@@ -228,6 +228,25 @@ p{
     }
 }
 
+/* About Me */
+.about-me{
+    .info-grid{
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 15px;
+
+        .grid-item{
+            text-align: center;
+
+            h2{
+                font-size: 2.2rem;
+            }
+            span{
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
 .section-header{
     max-width: fit-content;
     text-align: right;
