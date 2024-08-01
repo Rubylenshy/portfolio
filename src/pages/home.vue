@@ -160,7 +160,11 @@
     </section>
 
     <section ref="contact" class="contact">
-        
+        <div class="contact-container text-center py-5">
+            <h2>Interested in collaborating with me?</h2>
+            <p>I’m always open to discussing web design and development work or partnership opportunities.</p>
+            <button><i></i> Start a conversation</button>
+        </div>
     </section>
 
     <footer-comp :social-links="socialLinks"/>
