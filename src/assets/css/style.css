@@ -310,6 +310,17 @@ p{
     }
 }
 
+@keyframes fade-left-right {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 /* Media Queries*/
 @media (width <= 768px) {
     .nav-bar{
