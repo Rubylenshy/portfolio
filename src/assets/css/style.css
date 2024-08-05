@@ -299,6 +299,17 @@ p{
     }
 }
 
+@keyframes fade-top-bottom {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 /* Media Queries*/
 @media (width <= 768px) {
     .nav-bar{
@@ -337,4 +348,3 @@ p{
         padding-bottom: 100px;
     }
 }
-
