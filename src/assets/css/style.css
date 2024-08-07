@@ -275,6 +275,14 @@ p{
     color: #757575;
     padding: 40px 5%;
 
+    .scroll-to-top{
+        margin-top: -20px;
+
+        img{
+            width: 35px;
+        }
+    }
+
     .footer-links{
         a {
             color: #757575;
