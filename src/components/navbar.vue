@@ -35,7 +35,7 @@
                 navLinks: [
                     {label: 'Home', value: '/'},
                     {label: 'About', value: '/about'},
-                    {label: 'Projects', value: '/projects-page'},
+                    {label: 'Projects', value: '/projects'},
                     {label: 'Contact', value: '/contact'},
                     // {label: 'Articles', value: 'articles'}
                 ],
