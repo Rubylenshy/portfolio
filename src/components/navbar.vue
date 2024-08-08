@@ -7,7 +7,7 @@
             <div class="nav-links">
                 <ul class="d-flex nav-links-lists fw-semibold gap-4 gap-xl-5">
                     <li v-for="link in navLinks" :key="link.value">
-                        <a href="#" rel="noopener noreferrer">{{ (link.label).toUpperCase() }}</a>
+                        <router-link :to="link.value">{{ (link.label).toUpperCase() }}</router-link>
                     </li>
                 </ul>
             </div>
@@ -17,7 +17,7 @@
             <ul class="d-flex nav-links-lists gap-3">
                 <i class="bi bi-filetype-pdf"></i>
                 <li v-for="link in navLinks" :key="link.value">
-                    <a class="text-nowrap" href="#" rel="noopener noreferrer">{{ link.label }}</a>
+                    <router-link :to="link.value" class="text-nowrap">{{ link.label }}</router-link>
                 </li>
             </ul>
         </div>
@@ -33,10 +33,10 @@
         data() {
             return {
                 navLinks: [
-                    {label: 'Home', value: 'home'},
-                    {label: 'About', value: 'about'},
-                    {label: 'Projects', value: 'projects'},
-                    {label: 'Contact', value: 'contact'},
+                    {label: 'Home', value: '/'},
+                    {label: 'About', value: '/about'},
+                    {label: 'Projects', value: '/projects-page'},
+                    {label: 'Contact', value: '/contact'},
                     // {label: 'Articles', value: 'articles'}
                 ],
                 hasScrolled: false
