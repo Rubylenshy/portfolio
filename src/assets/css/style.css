@@ -284,7 +284,8 @@ p{
 
         img{
             width: 35px;
-            transform: translateY(8px)
+            transform: translateY(8px);
+            opacity: .5;
         }
     }
 
