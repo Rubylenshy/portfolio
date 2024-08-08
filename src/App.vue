@@ -1,16 +1,14 @@
 <template>
     <div id="app-portfolio">
-        <HomeView />
+        <router-view></router-view>
     </div>
 </template>
 
 <script>
-import HomeView from "./pages/home.vue";
 
 export default {
     name: "App",
     components: {
-        HomeView,
     },
 };
 </script>
