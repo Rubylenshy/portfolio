@@ -99,7 +99,7 @@
                     </div>
                 </div>
                 <div ref="heroContent" class="home-hero-content position-relative mh-100vh">
-                    <div id="hero-header" class="home-hero-header text-center fw-black" v-html="headerName"></div>
+                    <div id="hero-header" class="home-hero-header home-header text-center fw-black" v-html="headerName"></div>
 
                     <div class="home-headshot p-3">
                         <img class="d-flex mx-auto" src="../assets/images/headshot.jpg" alt="Reuben Oluwafemi" />
@@ -152,7 +152,8 @@
     </section>
 
     <section ref="contact" class="contact">
-        <div class="contact-container text-center py-5 px-3 px-md-0">
+        <div class="contact-container text-center py-5 px-3 px-md-4">
+            <h2 class="home-header">GET IN TOUCH</h2>
             <h2>Interested in collaborating with me?</h2>
             <p>I’m always open to discussing web design and development work or partnership opportunities.</p>
             <button class="btn a-btn"><i></i> Start a conversation</button>
