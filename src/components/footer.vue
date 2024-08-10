@@ -23,12 +23,12 @@
         data() {
             return {
                 socialLinks: [
-                    { name: 'Twitter', icon: 'fa-brands fa-x-twitter', href: 'https://twitter.com/yourusername' },
-                    { name: 'Frontend Mentor', icon: 'fa-brands fa-codepen', href: 'https://www.frontendmentor.io/profile/yourusername' },
+                    { name: 'Twitter', icon: 'fa-brands fa-x-twitter', href: 'https://twitter.com/tomoloj_' },
+                    { name: 'Frontend Mentor', icon: 'fa-brands fa-codepen', href: 'https://www.frontendmentor.io/profile/Rubylenshy' },
                     { name: 'GitHub', icon: 'fa-brands fa-github', href: 'https://github.com/Rubylenshy' },
                     { name: 'Slack', icon: 'fa-brands fa-slack', href: 'https://slack.com' },
-                    { name: 'LinkedIn', icon: 'fa-brands fa-linkedin', href: 'https://www.linkedin.com/in/yourusername/' },
-                    { name: 'Email', icon: 'fa-solid fa-envelope', href: 'mailto:youremail@example.com' }
+                    { name: 'LinkedIn', icon: 'fa-brands fa-linkedin', href: 'https://www.linkedin.com/in/reuben-tomoloju/' },
+                    { name: 'Email', icon: 'fa-solid fa-envelope', href: 'mailto:reztomoloju@gmail.com' }
                 ],
             }
         },
