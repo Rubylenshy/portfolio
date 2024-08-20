@@ -98,25 +98,27 @@
                         <a href="https://github.com/Rubylenshy"><i class="fa-brands fa-github fs-5 text-light"></i></a>
                     </div>
                 </div>
-                <div ref="heroContent" class="home-hero-content position-relative mh-100vh">
-                    <div id="hero-header" class="home-hero-header home-header text-center fw-black" v-html="headerName"></div>
-
-                    <div class="home-headshot p-3">
-                        <img class="d-flex mx-auto" src="../assets/images/headshot.jpg" alt="Reuben Oluwafemi" />
-                        <div class="d-none d-md-flex flex-column flex-md-row justify-content-between p-4">
-                            <p>I'm a frontend developer, and JavaScript engineer.</p>
-                            <p>Making contributions to communities in building problem-solving products</p>
-                        </div>
-                        <div class="d-block d-md-none pt-3">
-                            <p class="small-screen-header">I'm a frontend developer, and JavaScript engineer.</p>
-                            <ul class="skillsets d-flex gap-3 mb-3 text-muted overflow-scroll">
-                                <li v-for="skill in skillsets" :key="skill.name" class="d-flex align-items-center gap-2">
-                                    <i class="fa-brands fs-5" :class="[skill.icon]"></i>
-                                    <span>{{ skill.name }}</span>
-                                </li>
-                            </ul>
-                            <p>My insatiable curiosity and open-mindedness drive me to continually explore new horizons.
-                            Currently, I'm eager to apply my diverse skill set to the field of Finance Analysis and Statistics.</p>
+                <div ref="heroContent" class="home-hero-content position-relative">
+                    <div class="max-screen-size">
+                        <div id="hero-header" class="home-hero-header home-header text-center fw-black" v-html="headerName"></div>
+    
+                        <div class="home-headshot p-3">
+                            <img class="d-flex mx-auto" src="../assets/images/headshot.jpg" alt="Reuben Oluwafemi" />
+                            <div class="d-none d-md-flex flex-column flex-md-row justify-content-between p-4">
+                                <p>I'm a frontend developer, and JavaScript engineer.</p>
+                                <p>Making contributions to communities in building problem-solving products</p>
+                            </div>
+                            <div class="d-block d-md-none pt-3">
+                                <p class="small-screen-header">I'm a frontend developer, and JavaScript engineer.</p>
+                                <ul class="skillsets d-flex gap-3 mb-3 text-muted overflow-scroll">
+                                    <li v-for="skill in skillsets" :key="skill.name" class="d-flex align-items-center gap-2">
+                                        <i class="fa-brands fs-5" :class="[skill.icon]"></i>
+                                        <span>{{ skill.name }}</span>
+                                    </li>
+                                </ul>
+                                <p>My insatiable curiosity and open-mindedness drive me to continually explore new horizons.
+                                Currently, I'm eager to apply my diverse skill set to the field of Finance Analysis and Statistics.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
