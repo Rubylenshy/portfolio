@@ -2,7 +2,7 @@
     <footer class="footer">
         <div class="max-screen-size">
             <div class="main-container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
-                <div class="scroll-to-top d-flex d-md-none "><img src="../assets/svg/up-arrow.svg" alt="" @click="() => topFunction()"></div>
+                <div class="scroll-to-top d-flex d-md-none "><img src="../assets/svg/up-arrow.svg" alt="" @click="() => scrollToTop()"></div>
                 
                 <!-- If you give me some credit or shoutout here by linking to my website, then it will be a big thing for me and will help me a lot :) -->
                 <div class="text-center text-md-left">
@@ -35,7 +35,7 @@
             }
         },
         methods: {
-            topFunction() {
+            scrollToTop() {
                 document.body.scrollTop = 0;
                 document.documentElement.scrollTop = 0;
             }
