@@ -72,15 +72,6 @@
         },
         mounted() {
             this.headerName = `REUBEN <br> OLUWAFEMI`
-            
-            // const heroHeader = document.getElementById("hero-header");
-            // setTimeout(() => {
-            //     this.headerName = `REUBEN <br> OLUWAFEMI`
-    
-            //     if (heroHeader) {
-            //         heroHeader.classList.add('animate')
-            //     }
-            // }, 3000);
         },
     }
 </script>
