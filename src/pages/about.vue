@@ -1,7 +1,26 @@
 <template>
     <NavBar />
 
-    <div class="about-section"></div>
+    <section class="about-me p-3 my-4">
+        <div class="info-grid d-grid">
+            <div class="grid-item">
+                <h2>23</h2>
+                <span>Years Old</span>
+            </div>
+            <div class="grid-item">
+                <h2>23</h2>
+                <span>Years Old</span>
+            </div>
+            <div class="grid-item">
+                <h2>23</h2>
+                <span>Years Old</span>
+            </div>
+            <div class="grid-item">
+                <h2>23</h2>
+                <span>Years Old</span>
+            </div>
+        </div>
+    </section>
 
     <FooterComp />
 </template>
