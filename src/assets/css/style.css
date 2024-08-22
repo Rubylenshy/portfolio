@@ -23,6 +23,10 @@
 .text-justify{
     text-align: justify;
 }
+.no-scrollbar{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
 
 ul{
     list-style-type: none;
@@ -335,6 +339,19 @@ p{
 
 
 /* Animations */
+@keyframes scroll {
+    0% {
+        transform: translateX(0)
+    
+    }
+    50% {
+        transform: translateX(-100%)
+    }
+    100% {
+        transform: translateX(0)
+    }
+}
+
 @keyframes fade-bottom-top {
     from {
         transform: translateY(100px);
@@ -399,6 +416,10 @@ p{
         .header{
             max-width: unset;
             justify-content: center;
+        }
+
+        .projects-container{
+            animation: none;
         }
     }
 

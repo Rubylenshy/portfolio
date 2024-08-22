@@ -69,9 +69,19 @@
 
                 return top >= 0 && left >= 0 && bottom <= innerHeight && right <= innerWidth;
             },
+            handleHorizontalScroll() {
+                const container = this.$refs.projectContainer;
+                container.addEventListener('mouseenter', () => {
+                    container.style.animationPlayState = 'paused';
+                });
+
+                container.addEventListener('mouseleave', () => {
+                    container.style.animationPlayState = 'running';
+                });
+            }
         },
         mounted() {
-            this.headerName = `REUBEN <br> OLUWAFEMI`
+            this.headerName = `REUBEN <br> OLUWAFEMI`;
         },
     }
 </script>
@@ -127,7 +137,7 @@
                 <span class="d-none d-md-flex before"></span><h2 class="text-nowrap my-0 mx-4">SOME OF MY LATEST WORK</h2><span class="d-none d-md-flex after"></span>
             </div>
             <p class="text-center my-2">Here are a few projects I've worked on.</p>
-            <div class="projects-container d-flex flex-column flex-md-row overflow-hidden">
+            <div ref="projectContainer" class="projects-container d-flex flex-column flex-md-row overflow-scroll no-scrollbar">
                 <div v-for="project in projects" :key="project.title" class="project-items mx-3 my-4">
                     <project-listing :project="project" />
                 </div>
