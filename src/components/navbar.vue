@@ -15,7 +15,7 @@
 
         <div class="navbar-mobile d-flex d-md-none">
             <ul class="d-flex nav-links-lists gap-3">
-                <a href="https://drive.google.com/file/d/1ZPy351Ss6irkWBbvqAfr9_aESvD50Uvh/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <a class="fs-6" href="https://drive.google.com/file/d/1ZPy351Ss6irkWBbvqAfr9_aESvD50Uvh/view?usp=sharing" title="View Resume" target="_blank" rel="noopener noreferrer">
                     <i class="bi bi-filetype-pdf"></i>
                 </a>
                 <li v-for="link in navLinks" :key="link.value">
