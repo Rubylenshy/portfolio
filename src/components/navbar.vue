@@ -2,7 +2,7 @@
     <nav class="nav-bar">
         <div class="navbar-desktop d-none d-md-flex justify-content-between align-items-center shadow-sm" :class="{'animate-navbar': hasScrolled}">
             <div class="header-image">
-                <img src="../assets/images/logo1.png" width="30" alt="Ree.dev">
+                <img src="../assets/images/logo1.png" width="50" alt="Ree.dev">
             </div>
             <div class="nav-links">
                 <ul class="d-flex nav-links-lists fw-semibold gap-4 gap-xl-5">
