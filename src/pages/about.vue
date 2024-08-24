@@ -1,7 +1,7 @@
 <template>
     <NavBar />
 
-    <section class="about-me p-3 my-4">
+    <section class="about-me p-3 my-4 mx-auto">
         <div class="info-grid d-grid">
             <div class="grid-item">
                 <h2>23</h2>
