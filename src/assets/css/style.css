@@ -27,7 +27,10 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
-
+.bg-black{
+    background-color: black;
+}
+ 
 ul{
     list-style-type: none;
     margin: 0;
@@ -45,8 +48,8 @@ p{
     min-height: 100vh;
 }
 .a-btn{
-    height: 40px;
     border-radius: 10px;
+    padding: 10px 20px;
     border: 1px solid var(--clr-bisque-300);
     transition: all .4s;
 
@@ -55,7 +58,12 @@ p{
         padding: 0;
         width: 40px;
     }
-
+    &.fill{
+        background-color: var(--clr-bisque-300);
+        &:hover{
+            background-color: transparent;
+        }
+    }
     &:hover{
         background-color: var(--clr-bisque-300);
         color: #000;
@@ -303,6 +311,35 @@ p{
             width: 45%;
             height: 2px;
             background-color: #efd3b1;
+        }
+    }
+}
+
+/* Contact */
+.contact{
+    .contact-img{
+        img{
+            width: 100%;
+            max-width: 450px;
+            object-fit: contain;
+        }
+        
+    }
+    strong{
+        max-width: 350px;
+    }
+    
+    .contact-form{
+        max-width: 950px;
+        margin: auto;
+
+        .form-control{
+            padding: 15px;
+            border-radius: 0;
+            border: 1px solid #000;
+        }
+        .a-btn{
+            font-size: 1.2rem;
         }
     }
 }
