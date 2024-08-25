@@ -1,6 +1,13 @@
 <template>
     <NavBar />
 
+    <section class="about-intro-hero h-100vh">
+        <div class="intro-hero-texts">
+
+        </div>
+        <img src="../assets/images/side-image.jpg" alt="Reuben Oluwafemi">
+    </section>
+
     <section class="about-me p-3 my-4 mx-auto">
         <div class="info-grid d-grid">
             <div class="grid-item">
