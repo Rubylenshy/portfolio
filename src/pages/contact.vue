@@ -11,12 +11,13 @@
             </div>
             <div class="contact-container d-flex flex-column justify-content-center text-stsrt py-5 px-3 px-md-4">
                 <h2 class="home-header text-dark">Get in touch</h2>
-                <strong class="fs-5 lh-sm mt-3">Currently seeking new opportunities</strong>
+                <strong class="fs-5 lh-sm my-3">Currently seeking new opportunities</strong>
+                <p class="fs-6 mb-0">I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.</p>
             </div>
         </div>
 
         <form class="contact-form px-3">
-            <div class="d-flex flex-column flex-md-row">
+            <div class="d-flex flex-column flex-md-row gap-0 gap-md-3">
                 <div class="form-input d-flex flex-column mb-3 flex-fill">
                     <label class="mb-2" for="first_name">First Name</label>
                     <input
@@ -47,7 +48,7 @@
                 </div>
             </div>
 
-            <div class="d-flex flex-column flex-md-row">
+            <div class="d-flex flex-column flex-md-row gap-0 gap-md-3">
                 <div class="form-input d-flex flex-column mb-3 flex-fill">
                     <label class="mb-2" for="email">Email</label>
                     <input

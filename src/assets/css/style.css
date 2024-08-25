@@ -327,8 +327,8 @@ p{
         }
         
     }
-    strong{
-        max-width: 350px;
+    p{
+        max-width: 400px;
     }
     
     .contact-form{
