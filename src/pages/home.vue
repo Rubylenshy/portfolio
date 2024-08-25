@@ -92,13 +92,6 @@
 
         <div class="home-page">
             <section class="home-hero h-100vh">
-                <div class="d-flex d-md-none justify-content-between py-2 px-3 pt-4">
-                    <a href="#"><img src="../assets/images/logo1.png" alt="Reuben Oluwafemi" style="width: 35px; height: 35px;"/></a>
-                    <div class="d-flex align-items-center gap-3">
-                        <a href="#"><i class="fa-regular fa-lightbulb fs-5 text-light"></i></a>
-                        <a href="https://github.com/Rubylenshy"><i class="fa-brands fa-github fs-5 text-light"></i></a>
-                    </div>
-                </div>
                 <div ref="heroContent" class="home-hero-content position-relative">
                     <div class="max-screen-size">
                         <div id="hero-header" class="home-hero-header home-header text-center fw-black" v-html="headerName"></div>
