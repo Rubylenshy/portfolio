@@ -317,6 +317,8 @@ p{
 
 /* Contact */
 .contact{
+    margin-top: 140px;
+
     .contact-img{
         img{
             width: 100%;
@@ -466,6 +468,10 @@ p{
             height: 250px !important;
             width: 100% !important;
         }
+    }
+
+    .contact{
+        margin-top: 0px;
     }
 
     .footer{
