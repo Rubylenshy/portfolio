@@ -100,7 +100,7 @@
                             <img class="d-flex d-md-none mx-auto" src="../assets/images/headshot.jpg" alt="Reuben Oluwafemi" />
                             <div class="d-none d-md-flex flex-column flex-md-row justify-content-between p-4">
                                 <p>I'm a frontend developer, and JavaScript engineer.</p>
-                                <p>Making contributions to communities in building problem-solving products</p>
+                                <p>Contributing to communities by developing problem-solving products</p>
                             </div>
                             <div class="d-block d-md-none pt-3">
                                 <p class="small-screen-header text-center">I'm a frontend developer, and JavaScript engineer.</p>
