@@ -1,5 +1,7 @@
 <template>
-    <NavBar></NavBar>
+    <div class="contact-navbar">
+        <NavBar></NavBar>
+    </div>
 
     <section class="contact max-screen-size">
         <div class="d-flex flex-column flex-md-row-reverse mb-4 px-0 px-md-5">

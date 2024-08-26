@@ -14,12 +14,12 @@
         </div>
 
         <div class="navbar-mobile d-flex d-md-none">
-            <ul class="d-flex nav-links-lists gap-3">
+            <ul class="d-flex nav-links-lists align-items-center gap-2">
                 <a class="fs-6" href="https://drive.google.com/file/d/1ZPy351Ss6irkWBbvqAfr9_aESvD50Uvh/view?usp=sharing" title="View Resume" target="_blank" rel="noopener noreferrer">
                     <i class="bi bi-filetype-pdf"></i>
                 </a>
                 <li v-for="link in navLinks" :key="link.value">
-                    <router-link :to="link.value" class="text-nowrap">{{ link.label }}</router-link>
+                    <router-link :to="link.value" active-class="active-nav-mobile-link" class="text-nowrap">{{ link.label }}</router-link>
                 </li>
             </ul>
         </div>
