@@ -1,33 +1,40 @@
 <template>
     <NavBar />
 
-    <section class="about-intro-hero h-100vh">
-        <div class="intro-hero-texts">
-
+    <section class="about-page h-100vh">
+        <div class="about-intro-hero d-flex flex-column-reverse flex-md-row">
+            <div class="intro-hero-texts py-5 px-3">
+                <p>
+                    <strong><cite>Looking</cite></strong> <em>for</em> my next
+                    <strong>opportunity</strong>
+                    to make <em>a</em> <strong>change</strong>. <br>
+                    <strong><cite>The</cite></strong> <strong>digital</strong> way.</p>
+            </div>
+            <img src="../assets/images/side-image.jpg" alt="Reuben Oluwafemi">
         </div>
-        <img src="../assets/images/side-image.jpg" alt="Reuben Oluwafemi">
+
+        <section class="about-me p-3 my-4 mx-auto">
+            <div class="info-grid d-grid">
+                <div class="grid-item">
+                    <h2>23</h2>
+                    <span>Years Old</span>
+                </div>
+                <div class="grid-item">
+                    <h2>23</h2>
+                    <span>Years Old</span>
+                </div>
+                <div class="grid-item">
+                    <h2>23</h2>
+                    <span>Years Old</span>
+                </div>
+                <div class="grid-item">
+                    <h2>23</h2>
+                    <span>Years Old</span>
+                </div>
+            </div>
+        </section>
     </section>
 
-    <section class="about-me p-3 my-4 mx-auto">
-        <div class="info-grid d-grid">
-            <div class="grid-item">
-                <h2>23</h2>
-                <span>Years Old</span>
-            </div>
-            <div class="grid-item">
-                <h2>23</h2>
-                <span>Years Old</span>
-            </div>
-            <div class="grid-item">
-                <h2>23</h2>
-                <span>Years Old</span>
-            </div>
-            <div class="grid-item">
-                <h2>23</h2>
-                <span>Years Old</span>
-            </div>
-        </div>
-    </section>
 
     <FooterComp />
 </template>
