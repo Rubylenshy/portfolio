@@ -7,7 +7,7 @@
             <div class="nav-links">
                 <ul class="d-flex nav-links-lists fw-semibold gap-4 gap-xl-5">
                     <li v-for="link in navLinks" :key="link.value">
-                        <router-link :to="link.value">{{ (link.label).toUpperCase() }}</router-link>
+                        <router-link :to="link.value" active-class="active-nav-desktop-link">{{ (link.label).toUpperCase() }}</router-link>
                     </li>
                 </ul>
             </div>

@@ -184,6 +184,11 @@ p{
             padding: 1rem 3rem;
             background-color: rgba(26, 26, 26, 0.615);
         }
+
+        .active-nav-desktop-link{
+            color: var(--clr-bisque-400);
+            font-weight: 700;
+        }
     
     }
 

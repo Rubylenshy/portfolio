@@ -4,7 +4,7 @@
     <section class="about-page h-100vh">
         <div class="about-intro-hero d-flex flex-column-reverse flex-md-row">
             <div class="intro-hero-texts py-5 px-3">
-                <p>
+                <p class="m-0">
                     <strong><cite>Looking</cite></strong> <em>for</em> my next
                     <strong>opportunity</strong>
                     to make <em>a</em> <strong>change</strong>. <br>
