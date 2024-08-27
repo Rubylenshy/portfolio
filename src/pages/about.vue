@@ -1,7 +1,7 @@
 <template>
     <NavBar />
 
-    <section class="about-page h-100vh">
+    <section class="about-page">
         <div class="about-intro-hero d-flex flex-column-reverse flex-md-row">
             <div class="intro-hero-texts py-5 px-3">
                 <p class="m-0">
