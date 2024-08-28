@@ -317,7 +317,7 @@ p{
     .about-intro-hero{
         .intro-hero-texts{
             p{
-                font-size: 1.8rem;
+                font-size: clamp(1.8rem, 10vw, 3rem);
                 line-height: 2rem;
             }
         }
