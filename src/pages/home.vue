@@ -141,7 +141,7 @@
             <div class="contact-container text-center py-5 px-3 px-md-4">
                 <h2 class="home-header">GET IN TOUCH</h2>
                 <h2>Interested in collaborating with me?</h2>
-                <p>I’m always open to discussing web design and development work or partnership opportunities.</p>
+                <p class="mx-auto">I’m always open to discussing web design and development work or partnership opportunities.</p>
                 <router-link to="/contact">
                     <button class="btn a-btn"><i></i> Start a conversation</button>
                 </router-link>
