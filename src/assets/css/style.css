@@ -312,12 +312,12 @@ p{
 /* About Page */
 .about-page{
     padding-top: 140px;
-    background-color: #f4f4f4;
-
+    
     .about-intro-hero{
+        background-color: #f4f4f4;
         .intro-hero-texts{
             p{
-                font-size: clamp(1.8rem, 10vw, 3rem);
+                font-size: clamp(1.8rem, 10vw, 2.5rem);
                 line-height: 2rem;
             }
         }
