@@ -6,7 +6,7 @@
                 
                 <!-- If you give me some credit or shoutout here by linking to my website, then it will be a big thing for me and will help me a lot :) -->
                 <div class="text-center text-md-left">
-                    &copy; 2023-2024. Reuben Oluwafemi.
+                    &copy; 2023-2024
                     <!-- <cite><br> Inspired by <a rel="noreferrer" target="_blank" href="https://rammaheshwari.com">Ram Maheshwari</a></cite> -->
                 </div>
                 <ul class="footer-links d-flex gap-4 justify-content-center">
