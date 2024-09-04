@@ -27,8 +27,8 @@ export default {
 </script>
 
 <template>
-    <div class="project-listing d-flex flex-column justify-content-md-center">
-        <div class="project-info d-flex flex-column order-1 order-md-0 p-3">
+    <div class="project-listing position-relative">
+        <div class="position-absolute project-info d-flex flex-column order-1 order-md-0 p-3">
             <div class="d-flex flex-column flex-md-row justify-content-between gap-3">
                 <div class="section-header">
                     <h2 class="title fw-bold m-0">{{project.title}}</h2>
