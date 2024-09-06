@@ -310,20 +310,24 @@ p{
 }
 
 /* About Page */
+.about-navbar .nav-bar .navbar-desktop{
+    background-color: #0e1016;
+}
 .about-page{
-    padding-top: 140px;
-    
     .about-intro-hero{
+        padding: 140px 0;
         background-color: #f4f4f4;
         .intro-hero-texts{
             p{
-                font-size: clamp(1.8rem, 10vw, 2.5rem);
-                line-height: 2rem;
+                font-size: clamp(1.8rem, 6vw, 3.5rem);
+                line-height: 4rem;
+                max-width: 650px;
+                margin: 0 auto !important;
             }
         }
         img{
             width: 100%;
-            max-width: 450px;
+            max-width: 400px;
             object-fit: contain;
         }
     }
@@ -485,6 +489,10 @@ p{
 
     .about-page{
         .about-intro-hero{
+            padding-top: 0;
+            .intro-hero-texts p{
+                line-height: 2rem;
+            }
             img{
                 height: 300px;
                 object-fit: cover;
