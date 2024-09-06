@@ -31,7 +31,7 @@
                         aria-required="false"
                         aria-invalid="false"
                         maxlength="100"
-                        value=""
+                        v-model="form.firstName"
                     />
                 </div>
                 <div class="form-input d-flex flex-column mb-3 flex-fill">
@@ -45,7 +45,7 @@
                         aria-required="false"
                         aria-invalid="false"
                         maxlength="100"
-                        value=""
+                        v-model="form.LastName"
                     />
                 </div>
             </div>
@@ -56,6 +56,7 @@
                     <input
                         name="email"
                         id="email"
+                        v-model="form.email"
                         class="form-control"
                         type="email"
                         placeholder="johndoe@example.com"
@@ -65,7 +66,6 @@
                         pattern="^.+@.+\.[a-zA-Z]{2,63}$"
                         maxlength="250"
                         autocomplete="off"
-                        value=""
                     />
                 </div>
                 <div class="form-input d-flex flex-column mb-3 flex-fill">
@@ -73,14 +73,14 @@
                     <input
                         name="phone"
                         id="telephone"
+                        v-model="form.phone"
                         class="form-control"
                         type="tel"
-                        placeholder="+2341234567890 "
+                        placeholder="+2341234567890"
                         aria-required="false"
                         aria-invalid="false"
                         maxlength="50"
                         autocomplete="off"
-                        value=""
                     />
                 </div>
             </div>
@@ -90,13 +90,12 @@
                 <input
                     name="subject"
                     id="subject"
+                    v-model="form.subject"
                     class="form-control"
                     type="text"
-                    placeholder=""
                     aria-required="false"
                     aria-invalid="false"
                     autocomplete="off"
-                    value=""
                 />
             </div>
             <div class="form-input d-flex flex-column mb-3">
@@ -104,10 +103,10 @@
                 <textarea
                     id="textarea"
                     class="form-control"
-                    placeholder=""
+                    v-model="form.message"
                 ></textarea>
             </div>
-            <button class="btn a-btn fill rounded-0 mt-3"><i></i> Submit</button>
+            <button class="btn a-btn fill rounded-0 mt-3" @click="(e) => sendEmail(e)"><i></i> Submit</button>
         </form>
     </section>
 
@@ -117,6 +116,7 @@
 <script>
 import NavBar from "../components/navbar.vue";
 import FooterComp from "../components/footer.vue";
+import emailjs from 'emailjs-com';
 
 export default {
     name: "ContactPage",
@@ -124,5 +124,58 @@ export default {
         NavBar,
         FooterComp,
     },
+    data() {
+        return {
+            form: {
+                firstName: '',
+                LastName: '',
+                email: '',
+                phone: '',
+                subject: '',
+                message: '',
+            },
+            isSending: false,
+            showNotice: false
+        }
+    },
+    methods: {
+        sendEmail(e) {
+            this.isSending = true
+
+            const SERVICE_ID = 'service_3974qmx'
+            const TEMPLATE_ID = 'template_5c6d6lf'
+            const USER_ID = 'vP4PGCdVtIvBGtc8_'
+
+            try {
+                const status = emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID,
+                {
+                    from_name: this.form.firstName + ' ' + this.form.LastName,
+                    subject: this.form.subject,
+                    email: this.form.email,
+                    tel: this.form.phone,
+                    message: this.form.message
+                })
+
+                if (status.includes('OK')) {
+                    this.showNotice = true
+                }
+            } catch(error) {
+                console.log({error})
+            } finally {
+                this.isSending = false
+                this.resetForm()
+            }
+        },
+        resetForm() {
+            this.form = {
+                firstName: '',
+                LastName: '',
+                email: '',
+                phone: '',
+                subject: '',
+                message: '',
+            }
+        }
+    }
 };
 </script>

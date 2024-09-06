@@ -4,7 +4,7 @@
     </div>
 
     <section class="about-page">
-        <div class="about-intro-hero d-flex align-items-center flex-column-reverse flex-md-row w-100">
+        <div class="about-intro-hero d-flex align-items-center flex-column-reverse flex-md-row px-0 px-md-5 w-100">
             <div class="intro-hero-texts flex-fill py-5 px-3">
                 <p class="m-0">
                     <strong><cite>Looking</cite></strong> <em>for</em> my next
