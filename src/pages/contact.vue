@@ -3,6 +3,10 @@
         <NavBar></NavBar>
     </div>
 
+    <div class="position-relative">
+        <status-toast ref="statusToast"></status-toast>
+    </div>
+    
     <section class="contact max-screen-size">
         <div class="d-flex flex-column flex-md-row-reverse mb-4 px-0 px-md-5">
             <div class="contact-img d-flex justify-content-center p-3">
@@ -116,6 +120,7 @@
 <script>
 import NavBar from "../components/navbar.vue";
 import FooterComp from "../components/footer.vue";
+import StatusToast from '../components/status-toast.vue';
 import emailjs from 'emailjs-com';
 
 export default {
@@ -123,6 +128,7 @@ export default {
     components: {
         NavBar,
         FooterComp,
+        StatusToast
     },
     data() {
         return {
@@ -157,7 +163,7 @@ export default {
                 })
 
                 if (status.includes('OK')) {
-                    this.showNotice = true
+                    this.$refs.statusToast.showToast();
                 }
             } catch(error) {
                 console.log({error})
