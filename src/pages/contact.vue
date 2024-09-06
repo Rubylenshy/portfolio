@@ -6,7 +6,7 @@
     <div class="position-relative">
         <status-toast ref="statusToast"></status-toast>
     </div>
-    
+
     <section class="contact max-screen-size">
         <div class="d-flex flex-column flex-md-row-reverse mb-4 px-0 px-md-5">
             <div class="contact-img d-flex justify-content-center p-3">
@@ -110,7 +110,7 @@
                     v-model="form.message"
                 ></textarea>
             </div>
-            <button class="btn a-btn fill rounded-0 mt-3" @click="(e) => sendEmail(e)"><i></i> Submit</button>
+            <button v-if="!isSending" class="btn a-btn fill rounded-0 mt-3" @click="(e) => sendEmail(e)"><i class="fa-solid fa-paper-plane"></i> Submit</button>
         </form>
     </section>
 
@@ -140,8 +140,7 @@ export default {
                 subject: '',
                 message: '',
             },
-            isSending: false,
-            showNotice: false
+            isSending: false
         }
     },
     methods: {

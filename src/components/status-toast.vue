@@ -20,7 +20,7 @@
         name: 'StatusToast',
         data() {
             return {
-                show: true
+                show: false
             }
         },
         methods: {
