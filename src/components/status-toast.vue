@@ -1,5 +1,5 @@
 <template>
-    <div v-if="show" class="status-toast position-fixed bottom-0 z-2" style="max-width: 400px;">
+    <div v-if="show" class="status-toast position-fixed z-2">
         <div class="d-flex gap-3 p-3 bg-success text-white rounded-3">
             <i class="fa-solid fa-circle-check fs-4"></i>
             <div>
@@ -26,7 +26,7 @@
         methods: {
             showToast() {
                 this.show = true;
-                setTimeout(() => this.show = false, 5000);
+                setTimeout(() => this.show = false, 4000);
             },
             hideToast() {
                 this.show = false;
