@@ -164,6 +164,7 @@ export default {
                 if (status.includes('OK')) {
                     this.$refs.statusToast.showToast();
                 }
+
             } catch(error) {
                 console.log({error})
             } finally {
