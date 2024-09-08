@@ -15,6 +15,9 @@
     --clr-bisque-600: rgb(202, 163, 114);
     --clr-bisque-400: rgb(255, 222, 182);
     --clr-bisque-300: rgb(241, 219, 192);
+
+    --borderr-200: 10px;
+    --borderr-300: 15px;
 }
 .max-screen-size{
     max-width: 1440px;
@@ -182,7 +185,7 @@ p{
             border-radius: 15px;
             margin: 0 5% 0 5%;
             padding: 1rem 3rem;
-            background-color: rgba(26, 26, 26, 0.615);
+            background-color: rgba(26, 26, 26, 0.615) !important;
         }
 
         .active-nav-desktop-link{
@@ -329,6 +332,7 @@ p{
             width: 100%;
             max-width: 400px;
             object-fit: contain;
+            border-radius: var(--borderr-300);
         }
     }
     .about-me{
@@ -371,6 +375,7 @@ p{
             width: 100%;
             max-width: 450px;
             object-fit: contain;
+            border-radius: var(--borderr-300);
         }
         
     }
