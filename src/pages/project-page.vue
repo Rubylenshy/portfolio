@@ -21,7 +21,9 @@ export default {
 </script>
 
 <template>
-    <nav-bar />
+    <div class="project-navbar">
+        <nav-bar />
+    </div>
 
     <div class="project-page">
 

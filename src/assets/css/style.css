@@ -296,6 +296,9 @@ p{
 }
 
 /* Projects */
+.project-navbar .nav-bar .navbar-desktop{
+    background-color: #0e1016;
+}
 .projects {
     background-color: #a1a0a0;
 
