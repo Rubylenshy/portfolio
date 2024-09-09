@@ -315,6 +315,31 @@ p{
     }
 }
 
+.project-page{
+    padding-top: 140px;
+
+    .projects-box{
+        h1{
+            letter-spacing: -0.2rem;
+            font-size: clamp(1.8rem, 6vw, 3.5rem);
+        }
+        .projects-sub-title{
+            font-size: clamp(0.8rem, 3vw, 1.5rem);
+        }
+    }
+    .collaborations{
+        h3{
+            max-width: 650px;
+            margin: 0 auto;
+        }
+        .collab-logo-container{
+            img{
+                max-width: 300px;
+            }
+        }
+    }
+}
+
 /* About Page */
 .about-navbar .nav-bar .navbar-desktop{
     background-color: #0e1016;
@@ -335,7 +360,6 @@ p{
             width: 100%;
             max-width: 400px;
             object-fit: contain;
-            border-radius: var(--borderr-300);
         }
     }
     .about-me{
@@ -535,6 +559,9 @@ p{
         }
     }
 
+    .project-page{
+        padding-top: 30px;
+    }
     .contact, .about-page{
         padding: 0px;
     }
