@@ -131,7 +131,7 @@
             </div>
             <p class="text-center my-2">Here are a few projects I've worked on.</p>
             <div ref="projectContainer" class="projects-container d-flex flex-column flex-md-row overflow-scroll no-scrollbar">
-                <div v-for="project in projects" :key="project.title" class="project-items mx-3 my-4">
+                <div v-for="project in projects" :key="project.title" class="project-item mx-3 my-4">
                     <project-listing :project="project" />
                 </div>
             </div>
