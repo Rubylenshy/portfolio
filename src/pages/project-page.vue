@@ -51,7 +51,7 @@ export default {
             </p>
         </div>
 
-        <div class="collaborations">
+        <div class="collaborations p-4 mx-auto">
             <h3 class="text-center fw-bolder">I'm proud to have collaborated with some awesome companies:</h3>
             <div class="collab-logo-container d-flex flex-wrap justify-content-center">
                 <img v-for="logo in collabLogos" :key="logo.title" :src="logo.image" :alt="logo.title" :title="logo.title">
