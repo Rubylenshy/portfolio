@@ -15,6 +15,10 @@
             <img src="../assets/images/side-image.jpg" alt="Reuben Oluwafemi">
         </div>
 
+        <section class="this-is-me p-3 my-4 mx-auto">
+            
+        </section>
+
         <section class="about-me p-3 my-4 mx-auto">
             <div class="info-grid d-grid">
                 <div class="grid-item">
@@ -33,6 +37,18 @@
                     <h2>23</h2>
                     <span>Years Old</span>
                 </div>
+            </div>
+        </section>
+
+        <section class="experience p-3 my-4 mx-auto">
+            <div class="info-grid d-grid">
+                
+            </div>
+        </section>
+
+        <section class="tools_and_stacks p-3 my-4 mx-auto">
+            <div class="info-grid d-grid">
+                
             </div>
         </section>
     </section>
