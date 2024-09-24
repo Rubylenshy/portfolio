@@ -130,7 +130,7 @@
                 <span class="d-none d-md-flex before"></span><h2 class="text-nowrap my-0 mx-4">SOME OF MY LATEST WORK</h2><span class="d-none d-md-flex after"></span>
             </div>
             <p class="text-center my-2">Here are a few projects I've worked on.</p>
-            <div ref="projectContainer" class="projects-container d-flex flex-column flex-md-row overflow-scroll no-scrollbar">
+            <div ref="projectContainer" class="projects-container d-flex flex-column flex-md-row">
                 <div v-for="project in projects" :key="project.title" class="project-item mx-3 my-4">
                     <project-listing :project="project" />
                 </div>
