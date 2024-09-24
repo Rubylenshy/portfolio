@@ -101,6 +101,7 @@ p{
 /* Components - Project Listing */
 .project-listing{
     color: #fff;
+    width: 350px;
 
     &:hover .project-image::after{
         opacity: 0;

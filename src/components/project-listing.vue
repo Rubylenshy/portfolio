@@ -27,14 +27,14 @@ export default {
 </script>
 
 <template>
-    <div class="project-listing position-relative">
-        <div class="position-absolute project-info d-flex flex-column order-1 order-md-0 p-3">
+    <div class="project-listing">
+        <div class="project-info d-flex flex-column order-1 order-md-0 p-3">
             <div class="d-flex flex-column flex-md-row justify-content-between gap-3">
                 <div class="section-header">
                     <h2 class="title fw-bold m-0">{{project.title}}</h2>
                     <span class="sub-title">{{project.sub_title}}</span>
                 </div>
-                <div class="project-links d-flex justify-content-end gap-3">
+                <!--<div class="project-links d-flex justify-content-end gap-3">
                     <a class="d-flex align-items-center justify-content-center btn a-btn round" :href="project.github_link"><i class="bi bi-github"></i></a>
                     <a class="d-flex btn a-btn" :href="project.live_link">
                         <span class="d-flex text-nowrap">
@@ -43,7 +43,7 @@ export default {
                             <i class="bi bi-link ms-2"></i>
                         </span>
                     </a>
-                </div>
+                </div> -->
             </div>
             <div class="mt-4">
                 <p class="description">{{ project.desc }}</p>
