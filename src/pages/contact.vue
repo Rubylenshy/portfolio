@@ -22,7 +22,7 @@
             </div>
         </div>
 
-        <form class="contact-form px-3">
+        <form class="contact-form px-3" ref="contactForm" @submit.prevent="sendEmail">
             <div class="d-flex flex-column flex-md-row gap-0 gap-md-3">
                 <div class="form-input d-flex flex-column mb-3 flex-fill">
                     <label class="mb-2" for="first_name">First Name</label>
@@ -32,8 +32,6 @@
                         class="form-control"
                         type="text"
                         placeholder="e.g John"
-                        aria-required="false"
-                        aria-invalid="false"
                         maxlength="100"
                         v-model="form.firstName"
                     />
@@ -46,8 +44,6 @@
                         class="form-control"
                         type="text"
                         placeholder="e.g Doe"
-                        aria-required="false"
-                        aria-invalid="false"
                         maxlength="100"
                         v-model="form.LastName"
                     />
@@ -64,12 +60,8 @@
                         class="form-control"
                         type="email"
                         placeholder="johndoe@example.com"
-                        required=""
-                        aria-required="true"
-                        aria-invalid="true"
                         pattern="^.+@.+\.[a-zA-Z]{2,63}$"
                         maxlength="250"
-                        autocomplete="off"
                     />
                 </div>
                 <div class="form-input d-flex flex-column mb-3 flex-fill">
@@ -81,10 +73,7 @@
                         class="form-control"
                         type="tel"
                         placeholder="+2341234567890"
-                        aria-required="false"
-                        aria-invalid="false"
                         maxlength="50"
-                        autocomplete="off"
                     />
                 </div>
             </div>
@@ -110,7 +99,7 @@
                     v-model="form.message"
                 ></textarea>
             </div>
-            <button v-if="!isSending" class="btn a-btn fill rounded-0 mt-3" @click="(e) => sendEmail(e)"><i class="fa-solid fa-paper-plane"></i> Submit</button>
+            <button v-if="!isSending" class="btn a-btn fill rounded-0 mt-3" type="submit"><i class="fa-solid fa-paper-plane"></i> Submit</button>
         </form>
     </section>
 
@@ -144,7 +133,7 @@ export default {
         }
     },
     methods: {
-        sendEmail(e) {
+        async sendEmail() {
             this.isSending = true
 
             const SERVICE_ID = 'service_3974qmx'
@@ -152,7 +141,7 @@ export default {
             const USER_ID = 'vP4PGCdVtIvBGtc8_'
 
             try {
-                const status = emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID,
+                const status = await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, this.$refs.contactForm, USER_ID,
                 {
                     from_name: this.form.firstName + ' ' + this.form.LastName,
                     subject: this.form.subject,
