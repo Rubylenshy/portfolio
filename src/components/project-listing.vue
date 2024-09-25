@@ -70,15 +70,12 @@ export default {
         </div>
 
         <!-- <div class="project-links position-absolute d-flex justify-content-end gap-3">
-            <a class="d-flex align-items-center justify-content-center btn a-btn round" :href="project.github_link"><i class="bi bi-github"></i></a>
-            <a class="d-flex btn a-btn" :href="project.live_link">
-                <span class="d-flex text-nowrap">
-                    <i class="bi bi-link me-2"></i>
-                    Visit Project
-                    <i class="bi bi-link ms-2"></i>
-                </span>
+            <a class="d-flex align-items-center justify-content-center btn a-btn round fs-4" :href="project.github_link">
+                <i class="bi bi-github"></i>
+            </a>
+            <a class="d-flex align-items-center justify-content-center btn a-btn round fs-4" :href="project.live_link">
+                <i class="bi bi-link"></i>
             </a>
         </div> -->
-
     </div>
 </template>
