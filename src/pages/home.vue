@@ -20,32 +20,53 @@
                     {
                         title: 'Project One',
                         sub_title: 'A brief subtitle',
-                        desc: 'A detailed description of what Project One is about. A detailed description of what Project One is about.',
-                        image: require('../assets/images/project-temp.jpg'),
+                        images: [
+                            require('../assets/images/project-temp.jpg'),
+                            require('../assets/images/collab-logo-sample.png'),
+                            require('../assets/images/annotation-for-contact-us.png')
+                        ],
                         alt: 'An image representing Project One',
                         github_link: 'https://github.com/user/project-one',
                         live_link: 'https://live-link-to-project-one.com',
-                        skills: ['JavaScript', 'HTML', 'CSS']
+                        skills: [
+                            { name: 'ReactJS', icon: 'fa-react' },
+                            { name: 'VueJS', icon: 'fa-vuejs' },
+                            { name: 'NodeJS', icon: 'fa-node-js' },
+                        ]
                     },
                     {
                         title: 'Project Two',
                         sub_title: 'A brief subtitle',
-                        desc: 'A detailed description of what Project Two is about. A detailed description of what Project Two is about.',
-                        image: require('../assets/images/project-temp.jpg'),
+                        images: [
+                            require('../assets/images/project-temp.jpg'),
+                            require('../assets/images/collab-logo-sample.png'),
+                            require('../assets/images/annotation-for-contact-us.png')
+                        ],
                         alt: 'An image representing Project Two',
                         github_link: 'https://github.com/user/project-two',
                         live_link: 'https://live-link-to-project-two.com',
-                        skills: ['Python', 'Django', 'PostgreSQL']
+                        skills: [
+                            { name: 'ReactJS', icon: 'fa-react' },
+                            { name: 'VueJS', icon: 'fa-vuejs' },
+                            { name: 'NodeJS', icon: 'fa-node-js' },
+                        ]
                     },
                     {
                         title: 'Project Three',
                         sub_title: 'A brief subtitle',
-                        desc: 'A detailed description of what Project Three is about. A detailed description of what Project Three is about.',
-                        image: require('../assets/images/project-temp.jpg'),
+                        images: [
+                            require('../assets/images/project-temp.jpg'),
+                            require('../assets/images/collab-logo-sample.png'),
+                            require('../assets/images/annotation-for-contact-us.png')
+                        ],
                         alt: 'An image representing Project Three',
                         github_link: 'https://github.com/user/project-three',
                         live_link: 'https://live-link-to-project-three.com',
-                        skills: ['React', 'Node.js', 'MongoDB']
+                        skills: [
+                            { name: 'ReactJS', icon: 'fa-react' },
+                            { name: 'VueJS', icon: 'fa-vuejs' },
+                            { name: 'NodeJS', icon: 'fa-node-js' },
+                        ]
                     }
                 ],
                 skillsets: [
@@ -125,14 +146,16 @@
             </section>
         </div>
 
-        <section class="projects py-5">
-            <div class="header m-auto">
-                <span class="d-none d-md-flex before"></span><h2 class="text-nowrap my-0 mx-4">SOME OF MY LATEST WORK</h2><span class="d-none d-md-flex after"></span>
-            </div>
-            <p class="text-center my-2">Here are a few projects I've worked on.</p>
-            <div ref="projectContainer" class="projects-container d-flex flex-column flex-md-row">
-                <div v-for="project in projects" :key="project.title" class="project-item mx-3 my-4">
-                    <project-listing :project="project" />
+        <section class="home-projects py-5">
+            <div class="max-screen-size">
+                <div class="header m-auto">
+                    <span class="d-none d-md-flex before"></span><h2 class="text-nowrap my-0 mx-4">SOME OF MY LATEST WORK</h2><span class="d-none d-md-flex after"></span>
+                </div>
+                <p class="text-center my-2">Here are a few projects I've worked on.</p>
+                <div ref="projectContainer" class="projects-container d-grid p-5">
+                    <div v-for="project in projects" :key="project.title" class="project-item">
+                        <project-listing :project="project" />
+                    </div>
                 </div>
             </div>
         </section>

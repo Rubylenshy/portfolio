@@ -100,20 +100,10 @@ p{
 
 /* Components - Project Listing */
 .project-listing{
-    color: #fff;
-    width: 350px;
-
-    &:hover .project-image::after{
-        opacity: 0;
+    :not(.skillsets) {
+        color: #fff;
     }
 
-    .project-info{
-        background-color: #3b3c3c;
-    }
-
-    .description{
-        max-width: 450px;
-    }
     .skills{
         .skill-item{
             padding: 10px 15px;
@@ -146,10 +136,11 @@ p{
         }
     }
     .project-image{
-        width: 600px;
-        position: relative;
+        height: 350px;
+        width: 100%;
+        border-radius: 15px;
 
-        &::after{
+        /* &::after{
             background: linear-gradient(to bottom right, #f8e3a5, #617d98);
             content: "";
             height: 100%;
@@ -159,7 +150,7 @@ p{
             top: 0;
             transition: all .4s linear;
             width: 100%;
-        }
+        } */
     }
 }
 
@@ -299,9 +290,20 @@ p{
 .project-navbar .nav-bar .navbar-desktop{
     background-color: #0e1016;
 }
-.projects {
+.home-projects {
     background-color: #a1a0a0;
 
+    .projects-container{
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 1rem;
+        max-width: 1550px;
+
+        .project-item{
+            border-radius: 20px;
+            border: 2px solid #fff;
+            background-color: #3b3c3c;
+        }
+    }
     .header{
         max-width: 70%;
         display: flex;
@@ -555,7 +557,7 @@ p{
 
     .project-listing{
         .project-image{
-            height: 250px !important;
+            height: 350px !important;
             width: 100% !important;
         }
     }
