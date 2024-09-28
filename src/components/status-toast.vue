@@ -7,7 +7,7 @@
                     <strong class="mr-auto">Thank You for Reaching Out!</strong>
                     <i class="fa-solid fa-xmark fs-4" @click="hideToast"></i>
                 </div>
-                <div class="">
+                <div class="pt-2">
                     Your message has been sent successfully and I'll get back to you as soon as I can.
                 </div>
             </div>
@@ -26,7 +26,7 @@
         methods: {
             showToast() {
                 this.show = true;
-                setTimeout(() => this.show = false, 4000);
+                setTimeout(() => this.show = false, 5000);
             },
             hideToast() {
                 this.show = false;
