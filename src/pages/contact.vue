@@ -99,7 +99,13 @@
                     v-model="form.message"
                 ></textarea>
             </div>
-            <button v-if="!isSending" class="btn a-btn fill rounded-0 mt-3" type="submit"><i class="fa-solid fa-paper-plane"></i> Submit</button>
+            <button
+                class="btn a-btn fill rounded-0 mt-3"
+                type="submit"
+            >
+                <span v-if="!isSending"><i class="fa-solid fa-paper-plane"></i> Submit</span>
+                <span v-else><i class="fa-solid fa-spinner fa-spin"></i> Sending</span>
+            </button>
         </form>
     </section>
 
@@ -141,7 +147,7 @@ export default {
             const USER_ID = 'vP4PGCdVtIvBGtc8_'
 
             try {
-                const status = await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, this.$refs.contactForm, USER_ID,
+                const response = await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, this.$refs.contactForm, USER_ID,
                 {
                     from_name: this.form.firstName + ' ' + this.form.LastName,
                     subject: this.form.subject,
@@ -150,7 +156,7 @@ export default {
                     message: this.form.message
                 })
 
-                if (status.includes('OK')) {
+                if (response.status === 200) {
                     this.$refs.statusToast.showToast();
                 }
 
