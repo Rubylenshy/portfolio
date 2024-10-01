@@ -140,11 +140,49 @@ export default {
                 subject: '',
                 message: '',
             },
-            isSending: false
+            isSending: false,
+            errors: {}
         }
     },
     methods: {
+        validateForm() {
+            this.errors = {}; // Clear previous errors
+
+            if (!this.form.firstName) {
+                this.errors.firstName = "First name is required.";
+            }
+            if (!this.form.lastName) {
+                this.errors.lastName = "Last name is required.";
+            }
+            if (!this.form.email) {
+                this.errors.email = "Email is required.";
+            } else if (!this.validateEmail(this.form.email)) {
+                this.errors.email = "Email is not valid.";
+            }
+            if (this.form.phone && this.form.phone.length < 10) {
+                this.errors.phone = "Phone number must be at least 10 digits.";
+            }
+            if (!this.form.message) {
+                this.errors.message = "Message is required.";
+            }
+
+            if (Object.keys(this.errors).length > 0) {
+                setTimeout(() => {
+                    this.errors = {};
+                }, 4000);
+            }
+
+            return Object.keys(this.errors).length === 0;
+        },
+        validateEmail(email) {
+            const pattern = /^.+@.+\.[a-zA-Z]{2,63}$/;
+            return pattern.test(email);
+        },
         async sendEmail() {
+            if (!this.validateForm()) {
+                return
+            }
+
             this.isSending = true
 
             const SERVICE_ID = 'service_3974qmx'
