@@ -35,7 +35,7 @@
                         maxlength="100"
                         v-model="form.firstName"
                     />
-                    <span v-if="errors.firstName" class="text-danger">{{ errors.firstName }}</span>
+                    <span v-if="errors.firstName" class="text-danger fst-italic">{{ errors.firstName }}</span>
                 </div>
                 <div class="form-input d-flex flex-column mb-3 flex-fill">
                     <label class="mb-2" for="last_name">Last Name</label>
@@ -48,7 +48,7 @@
                         maxlength="100"
                         v-model="form.LastName"
                     />
-                    <span v-if="errors.lastName" class="text-danger">{{ errors.lastName }}</span>
+                    <span v-if="errors.lastName" class="text-danger fst-italic">{{ errors.lastName }}</span>
                 </div>
             </div>
 
@@ -65,7 +65,7 @@
                         pattern="^.+@.+\.[a-zA-Z]{2,63}$"
                         maxlength="250"
                     />
-                    <span v-if="errors.email" class="text-danger">{{ errors.email }}</span>
+                    <span v-if="errors.email" class="text-danger fst-italic">{{ errors.email }}</span>
                 </div>
                 <div class="form-input d-flex flex-column mb-3 flex-fill">
                     <label class="mb-2" for="telephone">Phone</label>
@@ -78,7 +78,7 @@
                         placeholder="+2341234567890"
                         maxlength="50"
                     />
-                    <span v-if="errors.phone" class="text-danger">{{ errors.phone }}</span>
+                    <span v-if="errors.phone" class="text-danger fst-italic">{{ errors.phone }}</span>
                 </div>
             </div>
 
@@ -102,7 +102,7 @@
                     class="form-control"
                     v-model="form.message"
                 ></textarea>
-                <span v-if="errors.message" class="text-danger">{{ errors.message }}</span>
+                <span v-if="errors.message" class="text-danger fst-italic">{{ errors.message }}</span>
             </div>
             <button
                 class="btn a-btn fill rounded-0 mt-3"
@@ -146,7 +146,7 @@ export default {
     },
     methods: {
         validateForm() {
-            this.errors = {}; // Clear previous errors
+            this.errors = {};
 
             if (!this.form.firstName) {
                 this.errors.firstName = "First name is required.";

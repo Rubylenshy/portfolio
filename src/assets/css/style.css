@@ -423,10 +423,16 @@ p{
         max-width: 950px;
         margin: auto;
 
-        .form-control{
-            padding: 15px;
-            border-radius: 0;
-            border: 1px solid #000;
+        .form-input{
+            .form-control{
+                padding: 15px;
+                border-radius: 0;
+                border: 1px solid #000;
+            }
+
+            span.text-danger{
+                font-size: .9rem;
+            }
         }
         .a-btn{
             font-size: 1.2rem;
