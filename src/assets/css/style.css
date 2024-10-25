@@ -291,23 +291,16 @@ p{
         font-size: .8rem;
     }
 }
-.background-wrapper {
-    position: relative;
-    height: 70vh;
-    overflow: hidden;
-}
-
-.background-section {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    background-image: url('../images/studio-pizza.jpg');
+.masked-background {
+    background-image: url('../images/bg-hero-section.jpg');
+    background-position: center center;
     background-size: cover;
-    background-position: center;
-    /* transform: translateY(100%);
-    transition: transform 0.5s ease; */
+    background-attachment: fixed;
+    display: inline;
+    float: left;
+    position: relative;
+    width: 100%;
+    transition: transform 1s ease;
 }
 
 /* Projects */
@@ -316,6 +309,7 @@ p{
 }
 .home-projects {
     background-color: #a1a0a0;
+    height: 100vh;
 
     .projects-container{
         grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
