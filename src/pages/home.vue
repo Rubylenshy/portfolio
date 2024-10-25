@@ -103,17 +103,6 @@
         },
         mounted() {
             this.headerName = `REUBEN <br> OLUWAFEMI`;
-
-        //     document.addEventListener('scroll', function() {
-        //     const scrollY = window.scrollY;
-        //     const beforeSectionHeight = document.querySelector('.').offsetHeight;
-
-        //     if (scrollY > beforeSectionHeight - 70) {
-        //         document.body.classList.add('scrolled');
-        //     } else {
-        //         document.body.classList.remove('scrolled');
-        //     }
-        // });
         },
     }
 </script>
@@ -171,8 +160,11 @@
             </div>
         </section>
 
-        <section class="background-wrapper">
-            <div class="background-section"></div>
+        <section class="masked-background">
+            <div class="content">
+                <h2>Masked Background Section</h2>
+                <p>This section reveals a masked background effect.</p>
+            </div>
         </section>
 
         <section ref="contact" class="home-contact">
