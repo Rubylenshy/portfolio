@@ -372,7 +372,7 @@ p{
         .intro-hero-texts{
             p{
                 font-size: clamp(1.8rem, 6vw, 3.5rem);
-                line-height: 4rem;
+                line-height: 4.5rem;
                 max-width: 650px;
                 margin: 0 auto !important;
             }
@@ -381,6 +381,10 @@ p{
             width: 100%;
             max-width: 400px;
             object-fit: contain;
+        }
+
+        .custom-text-digital{
+            background-color: #efd3b1;
         }
     }
     .about-me{
