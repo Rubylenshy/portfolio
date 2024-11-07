@@ -10,7 +10,7 @@
                     <strong><cite>Looking</cite></strong> <em>for</em> my next
                     <strong>opportunity</strong>
                     to make <em>a</em> <strong>change</strong>. <br>
-                    <strong><cite>The</cite></strong> <strong>digital</strong> way.</p>
+                    <cite>The</cite> <strong class="custom-text-digital">digital</strong> way.</p>
             </div>
             <img src="../assets/images/side-image.jpg" alt="Reuben Oluwafemi">
         </div>
