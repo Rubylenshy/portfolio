@@ -1,0 +1,53 @@
+[
+    {
+        "title": "Project One",
+        "sub_title": "A brief subtitle",
+        "images": [
+            "/images/project-temp.jpg",
+            "/images/collab-logo-sample.png",
+            "/images/annotation-for-contact-us.png"
+        ],
+        "alt": "An image representing Project One",
+        "github_link": "https://github.com/user/project-one",
+        "live_link": "https://live-link-to-project-one.com",
+        "skills": [
+            { "name": "ReactJS", "icon": "fa-react" },
+            { "name": "VueJS", "icon": "fa-vuejs" },
+            { "name": "NodeJS", "icon": "fa-node-js" }
+        ]
+    },
+    {
+        "title": "Project Two",
+        "sub_title": "A brief subtitle",
+        "images": [
+            "/images/project-temp.jpg",
+            "/images/collab-logo-sample.png",
+            "/images/annotation-for-contact-us.png"
+        ],
+        "alt": "An image representing Project Two",
+        "github_link": "https://github.com/user/project-two",
+        "live_link": "https://live-link-to-project-two.com",
+        "skills": [
+            { "name": "ReactJS", "icon": "fa-react" },
+            { "name": "VueJS", "icon": "fa-vuejs" },
+            { "name": "NodeJS", "icon": "fa-node-js" }
+        ]
+    },
+    {
+        "title": "Project Three",
+        "sub_title": "A brief subtitle",
+        "images": [
+            "/images/project-temp.jpg",
+            "/images/collab-logo-sample.png",
+            "/images/annotation-for-contact-us.png"
+        ],
+        "alt": "An image representing Project Three",
+        "github_link": "https://github.com/user/project-three",
+        "live_link": "https://live-link-to-project-three.com",
+        "skills": [
+            { "name": "ReactJS", "icon": "fa-react" },
+            { "name": "VueJS", "icon": "fa-vuejs" },
+            { "name": "NodeJS", "icon": "fa-node-js" }
+        ]
+    }
+]
