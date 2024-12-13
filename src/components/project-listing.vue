@@ -10,37 +10,12 @@ export default {
     },
     data() {
         return {
-            currentImageIndex: 0,
-            imageTimer: null
         };
     },
     computed: {
-        backgroundImageStyle() {
-            return {
-                backgroundImage: `url(${this.project.images[this.currentImageIndex]})`,
-                backgroundPosition: 'top center',
-                backgroundSize: 'cover',
-                backgroundRepeat: 'no-repeat',
-            };
-        }
     },
     methods: {
-        handleMouseOver() {
-            this.currentImageIndex = 1
-            this.startImageAnimation()
-        },
-        handleMouseLeave() {
-            this.stopImageAnimation();
-            this.currentImageIndex = 0
-        },
-        startImageAnimation() {
-            this.imageTimer = setInterval(() => {
-                this.currentImageIndex = (this.currentImageIndex + 1) % this.project.images.length;
-            }, 1000);
-        },
-        stopImageAnimation() {
-            clearInterval(this.imageTimer);
-        }
+        
     }
 }
 </script>
@@ -60,22 +35,14 @@ export default {
                 </li>
             </ul>
         </div>
-        <div class="p-3 pt-0">
-            <div
-                :style="backgroundImageStyle" 
-                class="project-image"
-                @mouseover="handleMouseOver" 
-                @mouseleave="handleMouseLeave"
-            ></div>
-        </div>
 
-        <!-- <div class="project-links position-absolute d-flex justify-content-end gap-3">
+        <div class="project-links d-flex justify-content-end gap-3">
             <a class="d-flex align-items-center justify-content-center btn a-btn round fs-4" :href="project.github_link">
                 <i class="bi bi-github"></i>
             </a>
             <a class="d-flex align-items-center justify-content-center btn a-btn round fs-4" :href="project.live_link">
                 <i class="bi bi-link"></i>
             </a>
-        </div> -->
+        </div>
     </div>
 </template>

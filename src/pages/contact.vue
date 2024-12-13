@@ -11,7 +11,7 @@
         <div class="d-flex flex-column flex-md-row-reverse mb-4 px-0 px-md-5">
             <div class="contact-img d-flex justify-content-center p-3">
                 <img
-                    src="../assets/images/side-image.jpg"
+                    src="/images/side-image.jpg"
                     alt="Reuben Oluwafemi"
                 />
             </div>

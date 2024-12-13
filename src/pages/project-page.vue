@@ -16,19 +16,19 @@ export default {
             collabLogos: [
                     {
                         title: 'Design Lab Inc.',
-                        image: require('../assets/images/collab-logo-sample.png')
+                        image: '/images/collab-logo-sample.png'
                     },
                     {
                         title: 'Design Lab Inc.',
-                        image: require('../assets/images/collab-logo-sample.png')
+                        image: '/images/collab-logo-sample.png'
                     },
                     {
                         title: 'Design Lab Inc.',
-                        image: require('../assets/images/collab-logo-sample.png')
+                        image: '/images/collab-logo-sample.png'
                     },
                     {
                         title: 'Design Lab Inc.',
-                        image: require('../assets/images/collab-logo-sample.png')
+                        image: '/images/collab-logo-sample.png'
                     }
                 ],
         }

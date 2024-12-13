@@ -12,7 +12,7 @@
                     to make <em>a</em> <strong>change</strong>. <br>
                     <cite>The</cite> <strong class="custom-text-digital">digital</strong> way.</p>
             </div>
-            <img src="../assets/images/side-image.jpg" alt="Reuben Oluwafemi">
+            <img src="images/side-image.jpg" alt="Reuben Oluwafemi">
         </div>
 
         <section class="this-is-me p-3 my-4 mx-auto">

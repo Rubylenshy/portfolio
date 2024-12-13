@@ -1,14 +1,13 @@
 <script>
     import NavBar from "../components/navbar.vue";
     import FooterComp from "../components/footer.vue";
-    import ProjectListing from "../components/project-listing.vue";
+    import projectsData from "../assets/data/projects.json";
 
     export default {
         name: 'HomeView',
         components: {
             NavBar,
-            FooterComp,
-            ProjectListing
+            FooterComp
         },
         props: {
             
@@ -16,59 +15,7 @@
         data() {
             return {
                 headerName: '',
-                projects: [
-                    {
-                        title: 'Project One',
-                        sub_title: 'A brief subtitle',
-                        images: [
-                            require('../assets/images/project-temp.jpg'),
-                            require('../assets/images/collab-logo-sample.png'),
-                            require('../assets/images/annotation-for-contact-us.png')
-                        ],
-                        alt: 'An image representing Project One',
-                        github_link: 'https://github.com/user/project-one',
-                        live_link: 'https://live-link-to-project-one.com',
-                        skills: [
-                            { name: 'ReactJS', icon: 'fa-react' },
-                            { name: 'VueJS', icon: 'fa-vuejs' },
-                            { name: 'NodeJS', icon: 'fa-node-js' },
-                        ]
-                    },
-                    {
-                        title: 'Project Two',
-                        sub_title: 'A brief subtitle',
-                        images: [
-                            require('../assets/images/project-temp.jpg'),
-                            require('../assets/images/collab-logo-sample.png'),
-                            require('../assets/images/annotation-for-contact-us.png')
-                        ],
-                        alt: 'An image representing Project Two',
-                        github_link: 'https://github.com/user/project-two',
-                        live_link: 'https://live-link-to-project-two.com',
-                        skills: [
-                            { name: 'ReactJS', icon: 'fa-react' },
-                            { name: 'VueJS', icon: 'fa-vuejs' },
-                            { name: 'NodeJS', icon: 'fa-node-js' },
-                        ]
-                    },
-                    {
-                        title: 'Project Three',
-                        sub_title: 'A brief subtitle',
-                        images: [
-                            require('../assets/images/project-temp.jpg'),
-                            require('../assets/images/collab-logo-sample.png'),
-                            require('../assets/images/annotation-for-contact-us.png')
-                        ],
-                        alt: 'An image representing Project Three',
-                        github_link: 'https://github.com/user/project-three',
-                        live_link: 'https://live-link-to-project-three.com',
-                        skills: [
-                            { name: 'ReactJS', icon: 'fa-react' },
-                            { name: 'VueJS', icon: 'fa-vuejs' },
-                            { name: 'NodeJS', icon: 'fa-node-js' },
-                        ]
-                    }
-                ],
+                projects: projectsData,
                 skillsets: [
                     { name: 'ReactJS', icon: 'fa-react' },
                     { name: 'VueJS', icon: 'fa-vuejs' },
@@ -90,16 +37,6 @@
 
                 return top >= 0 && left >= 0 && bottom <= innerHeight && right <= innerWidth;
             },
-            handleHorizontalScroll() {
-                const container = this.$refs.projectContainer;
-                container.addEventListener('mouseenter', () => {
-                    container.style.animationPlayState = 'paused';
-                });
-
-                container.addEventListener('mouseleave', () => {
-                    container.style.animationPlayState = 'running';
-                });
-            }
         },
         mounted() {
             this.headerName = `REUBEN <br> OLUWAFEMI`;
@@ -118,7 +55,7 @@
                         <div id="hero-header" class="home-hero-header home-header text-center fw-black" v-html="headerName"></div>
     
                         <div class="home-headshot p-3">
-                            <img class="d-flex d-md-none mx-auto" src="../assets/images/headshot.jpg" alt="Reuben Oluwafemi" />
+                            <img class="d-flex d-md-none mx-auto" src="/images/headshot.jpg" alt="Reuben Oluwafemi" />
                             <div class="d-none d-md-flex flex-column flex-md-row justify-content-between p-4">
                                 <p>I'm a frontend developer, and JavaScript engineer.</p>
                                 <p>Contributing to communities by developing problem-solving products</p>
@@ -136,25 +73,20 @@
                     </div>
                 </div>
             </section>
-
-            <section class="intro-text-section py-5 px-3">
-                <div class="text-center">
-                    <h2 class="my-3">Hi! Nice to meet you.</h2>
-                    <p class="">My insatiable curiosity and open-mindedness fuels my drive to explore new horizons. I value clean design, patterns and bringing ideas to life in the browser.
-                        Collaborated with talented people to create digital products for both individuals and corperate bodies. </p>
-                </div>
-            </section>
         </div>
 
         <section class="home-projects py-5">
             <div class="max-screen-size">
-                <div class="header m-auto">
-                    <span class="d-none d-md-flex before"></span><h2 class="text-nowrap my-0 mx-4">SOME OF MY LATEST WORK</h2><span class="d-none d-md-flex after"></span>
+                <div class="text-center py-4">
+                    <h2 class="home-header text-dark">projects.</h2>
                 </div>
-                <p class="text-center my-2">Here are a few projects I've worked on.</p>
-                <div ref="projectContainer" class="projects-container d-grid p-5">
-                    <div v-for="project in projects" :key="project.title" class="project-item">
-                        <project-listing :project="project" />
+                <div class="projects-container p-5">
+                    <div v-for="project in projects" :key="project.title" class="project-item position-relative">
+                        <img class="project-thumb" :src="project.images[0]" :alt="project.alt">
+                        <div class="overlay d-flex flex-column align-items-center justify-content-center position-absolute text-center">
+                            <p>{{ project.description }}</p>
+                            <button>Visit Website</button>
+                        </div>
                     </div>
                 </div>
             </div>

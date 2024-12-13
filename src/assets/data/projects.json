@@ -2,6 +2,7 @@
     {
         "title": "Project One",
         "sub_title": "A brief subtitle",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, repellat voluptates quam alias odit",
         "images": [
             "/images/project-temp.jpg",
             "/images/collab-logo-sample.png",
@@ -19,6 +20,7 @@
     {
         "title": "Project Two",
         "sub_title": "A brief subtitle",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, repellat voluptates quam alias odit",
         "images": [
             "/images/project-temp.jpg",
             "/images/collab-logo-sample.png",
@@ -36,6 +38,7 @@
     {
         "title": "Project Three",
         "sub_title": "A brief subtitle",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, repellat voluptates quam alias odit",
         "images": [
             "/images/project-temp.jpg",
             "/images/collab-logo-sample.png",
@@ -48,6 +51,60 @@
             { "name": "ReactJS", "icon": "fa-react" },
             { "name": "VueJS", "icon": "fa-vuejs" },
             { "name": "NodeJS", "icon": "fa-node-js" }
+        ]
+    },
+    {
+        "title": "Project Four",
+        "sub_title": "An innovative project",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, repellat voluptates quam alias odit",
+        "images": [
+            "/images/project-temp.jpg",
+            "/images/collab-logo-sample-four.png",
+            "/images/annotation-four.png"
+        ],
+        "alt": "An image representing Project Four",
+        "github_link": "https://github.com/user/project-four",
+        "live_link": "https://live-link-to-project-four.com",
+        "skills": [
+            { "name": "Python", "icon": "fa-python" },
+            { "name": "Django", "icon": "fa-django" },
+            { "name": "PostgreSQL", "icon": "fa-database" }
+        ]
+    },
+    {
+        "title": "Project Five",
+        "sub_title": "A unique experiment",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, repellat voluptates quam alias odit",
+        "images": [
+            "/images/project-temp.jpg",
+            "/images/collab-logo-sample-five.png",
+            "/images/annotation-five.png"
+        ],
+        "alt": "An image representing Project Five",
+        "github_link": "https://github.com/user/project-five",
+        "live_link": "https://live-link-to-project-five.com",
+        "skills": [
+            { "name": "Angular", "icon": "fa-angular" },
+            { "name": "TypeScript", "icon": "fa-typescript" },
+            { "name": "Firebase", "icon": "fa-fire" }
+        ]
+    },
+    {
+        "title": "Project Six",
+        "sub_title": "A creative solution",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, repellat voluptates quam alias odit",
+        "images": [
+            "/images/project-temp.jpg",
+            "/images/collab-logo-sample-six.png",
+            "/images/annotation-six.png"
+        ],
+        "alt": "An image representing Project Six",
+        "github_link": "https://github.com/user/project-six",
+        "live_link": "https://live-link-to-project-six.com",
+        "skills": [
+            { "name": "Ruby", "icon": "fa-gem" },
+            { "name": "Rails", "icon": "fa-rails" },
+            { "name": "MySQL", "icon": "fa-database" }
         ]
     }
 ]
