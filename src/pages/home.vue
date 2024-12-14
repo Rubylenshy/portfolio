@@ -80,7 +80,7 @@
                 <div class="text-center py-4">
                     <h2 class="home-header text-dark">projects.</h2>
                 </div>
-                <div class="projects-container p-5">
+                <div class="projects-container p-3 p-md-5">
                     <div
                         v-for="project in projects"
                         :key="project.title"
@@ -88,8 +88,8 @@
                         :style="{ backgroundImage: 'url(' + project.images[0] + ')' }"
                     >
                         <div class="overlay d-flex flex-column align-items-center justify-content-center position-absolute text-center">
-                            <p>{{ project.description }}</p>
-                            <button>Visit Website</button>
+                            <p class="text-white">{{ project.description }}</p>
+                            <button class="btn a-btn">Visit Website</button>
                         </div>
                     </div>
                 </div>

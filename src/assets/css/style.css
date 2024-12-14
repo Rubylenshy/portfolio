@@ -310,14 +310,16 @@ p{
             display: block;
             padding: 0.75rem;
             max-width: 350px;
+            min-width: 320px;
             height: 220px;
+            border-radius: 15px;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             transition: .25s ease-in-out;
 
             .overlay{
-                background-color: #0e101670;
+                background-color: #0e1016c6;
                 top: 0;
                 bottom: 0;
                 right: 0;
