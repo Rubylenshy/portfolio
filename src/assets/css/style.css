@@ -45,7 +45,7 @@ a{
     transition: all .4s;
 }
 p{
-    font-size: clamp(0.85rem, 2vw, 1.05rem);
+    font-size: clamp(0.85rem, 1vw, 1.05rem);
 }
 .mh-100vh{
     min-height: 100vh;
@@ -54,6 +54,7 @@ p{
     border-radius: 10px;
     padding: 10px 20px;
     border: 1px solid var(--clr-bisque-300);
+    font-size: clamp(0.85rem, 1vw, 1.05rem);
     transition: all .4s;
 
     &.round{
@@ -64,12 +65,12 @@ p{
     &.fill{
         background-color: var(--clr-bisque-300);
         &:hover{
-            background-color: transparent;
+            background-color: transparent !important;
         }
     }
     &:hover{
         background-color: var(--clr-bisque-300);
-        color: #000;
+        color: #000 !important;
     }
 }
 .home-header{
@@ -324,13 +325,14 @@ p{
                 bottom: 0;
                 right: 0;
                 left: 0;
+                border-radius: 15px;
                 z-index: 1;
-                visibility: hidden;
+                display: none !important;
             }
 
             &:hover{
                 & .overlay{
-                    visibility: visible;
+                    display: flex !important;
                 }
             }
             
@@ -547,6 +549,24 @@ p{
 }
 
 /* Media Queries*/
+@media (width <= 1100px) {
+    .home-projects{
+        .projects-container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            .project-item{
+                flex-grow: 1;
+                padding: 0.75rem;
+                min-width: 250px;
+                height: 200px;
+            }
+        }
+    }
+}
+
 @media (width <= 768px) {
     .nav-bar{
         position: fixed;
