@@ -89,7 +89,7 @@
                     >
                         <div class="overlay d-flex flex-column align-items-center justify-content-center position-absolute text-center p-3">
                             <p class="text-white">{{ project.description }}</p>
-                            <button class="btn a-btn text-white">Visit Website</button>
+                            <a :href="project.live_link" target="_blank" class="btn a-btn text-white">Visit Website</a>
                         </div>
                     </div>
                 </div>
