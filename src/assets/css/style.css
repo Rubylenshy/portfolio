@@ -53,7 +53,7 @@ p{
 .a-btn{
     border-radius: 10px;
     padding: 10px 20px;
-    border: 1px solid var(--clr-bisque-300);
+    border: 2px solid var(--clr-bisque-300);
     font-size: clamp(0.85rem, 1vw, 1.05rem);
     transition: all .4s;
 
@@ -172,6 +172,14 @@ p{
             margin: 0 5% 0 5%;
             padding: 1rem 3rem;
             background-color: rgba(26, 26, 26, 0.615) !important;
+        }
+
+        .nav-links{
+            li a{
+                &:hover{
+                    border-bottom: 2px solid var(--clr-bisque-400);
+                }
+            }
         }
 
         .active-nav-desktop-link{
