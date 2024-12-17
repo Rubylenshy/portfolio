@@ -89,10 +89,13 @@
                     >
                         <div class="overlay d-flex flex-column align-items-center justify-content-center position-absolute text-center p-3">
                             <p class="text-white">{{ project.description }}</p>
-                            <a :href="project.live_link" target="_blank" class="btn a-btn text-white">Visit Website</a>
+                            <a :href="project.live_link" target="_blank" class="btn a-btn d-flex align-items-center text-white">Visit Website <i class="fa-solid fa-square-arrow-up-right ms-2 fs-5"></i></a>
                         </div>
                     </div>
                 </div>
+                <router-link to="/projects" class="d-flex justify-content-center pb-4">
+                    <button class="btn a-btn"><i class="fa-solid fa-briefcase"></i> See more on the projects page</button>
+                </router-link>
             </div>
         </section>
 
@@ -109,7 +112,7 @@
                 <h2>Interested in collaborating with me?</h2>
                 <p class="mx-auto">I’m always open to discussing web design and development work or partnership opportunities.</p>
                 <router-link to="/contact">
-                    <button class="btn a-btn"><i></i> Start a conversation</button>
+                    <button class="btn a-btn"><i class="fa-brands fa-rocketchat"></i> Start a conversation</button>
                 </router-link>
             </div>
         </section>
