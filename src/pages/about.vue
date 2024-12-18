@@ -1,5 +1,5 @@
 <template>
-    <div class="about-navbar">
+    <div class="about-navbar position-relative">
         <NavBar />
     </div>
 

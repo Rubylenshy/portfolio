@@ -93,9 +93,11 @@
                         </div>
                     </div>
                 </div>
-                <router-link to="/projects" class="d-flex justify-content-center pb-4">
-                    <button class="btn a-btn"><i class="fa-solid fa-briefcase"></i> See more on the projects page</button>
-                </router-link>
+                <div class="d-flex justify-content-center pb-4">
+                    <router-link to="/projects">
+                        <button class="btn a-btn"><i class="fa-solid fa-briefcase"></i> See more on the projects page</button>
+                    </router-link>
+                </div>
             </div>
         </section>
 

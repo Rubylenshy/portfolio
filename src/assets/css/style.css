@@ -364,7 +364,6 @@ p{
 
     .projects-box{
         h1{
-            letter-spacing: -0.2rem;
             font-size: clamp(1.8rem, 6vw, 3.5rem);
         }
         .projects-sub-title{
@@ -582,6 +581,11 @@ p{
         left: 50%;
         transform: translateX(-50%);
         z-index: 999;
+    }
+
+    .sticky-navbar{
+        position: sticky;
+        top: 0;
     }
 
     .home-hero-content{

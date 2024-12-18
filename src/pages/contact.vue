@@ -1,5 +1,5 @@
 <template>
-    <div class="contact-navbar">
+    <div class="contact-navbar position-relative">
         <NavBar></NavBar>
     </div>
 
