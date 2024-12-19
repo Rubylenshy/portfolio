@@ -215,6 +215,15 @@ p{
 
 }
 
+.nav-top-bar{
+    .contra-hire-me-button{
+        font-family: var(--ff-ibm-plex);
+        font-size: 1.5rem;
+        a img{
+            width: 170px;
+        }
+    }
+}
 
 /* Home */
 .home-page{
@@ -581,11 +590,6 @@ p{
         left: 50%;
         transform: translateX(-50%);
         z-index: 999;
-    }
-
-    .sticky-navbar{
-        position: sticky;
-        top: 0;
     }
 
     .home-hero-content{

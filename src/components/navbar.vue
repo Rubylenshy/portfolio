@@ -27,19 +27,25 @@
         </div>
     </nav>
 
-    <div class="sticky-navbar d-flex d-md-none justify-content-between px-3 py-4 bg-black">
+    <div class="nav-top-bar d-flex d-md-none justify-content-between px-3 py-4 bg-black z-3">
         <a href="#"><img src="/images/logo1.png" alt="Reuben Oluwafemi" style="width: 35px; height: 35px;"/></a>
         <div class="d-flex align-items-center gap-3">
+            <contra-button />
             <a href="https://github.com/Rubylenshy"><i class="fa-brands fa-github fs-5 text-light"></i></a>
         </div>
     </div>
 </template>
 
 <script>
+    import ContraButton from "./hire-me-contra.vue";
+
     export default {
         name: 'NavBar',
         props: {
             
+        },
+        components: {
+            ContraButton
         },
         data() {
             return {
