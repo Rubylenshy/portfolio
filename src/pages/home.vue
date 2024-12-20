@@ -14,6 +14,7 @@
         },
         data() {
             return {
+                loaded: false,
                 headerName: '',
                 projects: projectsData,
                 skillsets: [
@@ -40,12 +41,21 @@
         },
         mounted() {
             this.headerName = `REUBEN <br> OLUWAFEMI`;
+
+            this.loaded = false;
+
+            const maskedSection = this.$refs.maskedSection;
+            // Add class to start the unveiling effect
+            setTimeout(() => {
+                this.loaded = true;
+                maskedSection.classList.add('reveal');
+            }, 5000);
         },
     }
 </script>
 
 <template>
-    <div ref="homePage" class="position-relative">
+    <div v-if="loaded" ref="homePage" class="position-relative">
         <nav-bar />
 
         <div class="home-page">
@@ -101,15 +111,8 @@
             </div>
         </section>
 
-        <section class="masked-background">
-            <div class="content">
-                <h2>Masked Background Section</h2>
-                <p>This section reveals a masked background effect.</p>
-            </div>
-        </section>
-
         <section ref="contact" class="home-contact">
-            <div class="contact-container text-center pb-5 px-3 px-md-4">
+            <div class="contact-container text-center py-5 px-3 px-md-4">
                 <h2 class="home-header">GET IN TOUCH</h2>
                 <h2>Interested in collaborating with me?</h2>
                 <p class="mx-auto">I’m always open to discussing web design and development work or partnership opportunities.</p>
@@ -120,6 +123,15 @@
         </section>
 
         <footer-comp />
+    </div>
+
+    <div v-if="!loaded" ref="maskedSection" class="masked-section">
+        <div class="masked-background">
+            <div class="content">
+                <h2>Masked Background Section</h2>
+                <p>This section reveals a masked background effect.</p>
+            </div>
+        </div>
     </div>
 
 </template>
