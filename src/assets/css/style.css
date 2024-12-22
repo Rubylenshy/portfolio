@@ -315,11 +315,9 @@ p{
 }
 
 .masked-section .masked-background {
-    background-image: url('../../../public/images/hello-world-bg.jpeg');
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
-    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     width: 100%;
     height: 100%;
