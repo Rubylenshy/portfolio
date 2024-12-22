@@ -45,10 +45,10 @@
             this.loaded = false;
 
             const maskedSection = this.$refs.maskedSection;
+            maskedSection.classList.add('reveal');
             // Add class to start the unveiling effect
             setTimeout(() => {
                 this.loaded = true;
-                maskedSection.classList.add('reveal');
             }, 5000);
         },
     }
@@ -125,11 +125,10 @@
         <footer-comp />
     </div>
 
-    <div v-if="!loaded" ref="maskedSection" class="masked-section">
+    <div v-else ref="maskedSection" class="masked-section">
         <div class="masked-background">
             <div class="content">
-                <h2>Masked Background Section</h2>
-                <p>This section reveals a masked background effect.</p>
+                <img src="/images/logo1.png" alt="Reuben Oluwafemi" style="width: 80px; height: 80px;"/>
             </div>
         </div>
     </div>

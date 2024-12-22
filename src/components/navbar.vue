@@ -28,7 +28,9 @@
     </nav>
 
     <div class="nav-top-bar d-flex d-md-none justify-content-between px-3 py-4 bg-black z-3">
-        <a href="#"><img src="/images/logo1.png" alt="Reuben Oluwafemi" style="width: 35px; height: 35px;"/></a>
+        <router-link to="/">
+            <img src="/images/logo1.png" alt="Reuben Oluwafemi" style="width: 35px; height: 35px;"/>
+        </router-link>
         <div class="d-flex align-items-center gap-3">
             <contra-button />
             <a href="https://github.com/Rubylenshy"><i class="fa-brands fa-github fs-5 text-light"></i></a>
