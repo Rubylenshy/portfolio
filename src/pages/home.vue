@@ -128,7 +128,7 @@
     <div v-else ref="maskedSection" class="masked-section">
         <div class="masked-background">
             <div class="content">
-                <img src="/images/logo1.png" alt="Reuben Oluwafemi" style="width: 80px; height: 80px;"/>
+                <img class="loader-icon" src="/images/logo1.png" alt="Reuben Oluwafemi" style="width: 80px; height: 80px;"/>
             </div>
         </div>
     </div>
