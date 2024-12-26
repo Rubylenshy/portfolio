@@ -1,6 +1,6 @@
 [
     {
-        "title": "Project One",
+        "title": "SunnySide Agency",
         "sub_title": "A brief subtitle",
         "description": "I am a shoe business owner, I want to introduce you to my shoe business",
         "images": [
@@ -18,7 +18,7 @@
         ]
     },
     {
-        "title": "Project Two",
+        "title": "Tip Calculator",
         "sub_title": "A brief subtitle",
         "description": "I am a core member, serving in Edo state",
         "images": [
@@ -36,7 +36,7 @@
         ]
     },
     {
-        "title": "Project Three",
+        "title": "To-do App",
         "sub_title": "A brief subtitle",
         "description": "The lord is my shepherd, I shall not want",
         "images": [
@@ -54,7 +54,7 @@
         ]
     },
     {
-        "title": "Project Four",
+        "title": "Static Job Listing",
         "sub_title": "An innovative project",
         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, repellat voluptates quam alias odit",
         "images": [
@@ -72,7 +72,7 @@
         ]
     },
     {
-        "title": "Project Five",
+        "title": "Meet Landing Page",
         "sub_title": "A unique experiment",
         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, repellat voluptates quam alias odit",
         "images": [
@@ -90,7 +90,7 @@
         ]
     },
     {
-        "title": "Project Six",
+        "title": "Manage Landing Page",
         "sub_title": "A creative solution",
         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, repellat voluptates quam alias odit",
         "images": [
