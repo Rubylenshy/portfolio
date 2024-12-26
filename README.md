@@ -22,7 +22,7 @@ npm run lint
 
 ### Commit messages
 ```
-build, fix, reset, refactor. 
+build, fix, feat, reset, refactor. 
 ```
 
 ### Customize configuration
