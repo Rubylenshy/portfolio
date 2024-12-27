@@ -71,7 +71,7 @@
                                 <p>Contributing to communities by developing problem-solving products</p>
                             </div>
                             <div class="d-block d-md-none pt-3">
-                                <p class="small-screen-header text-center">I'm a frontend developer, and JavaScript engineer.</p>
+                                <p class="small-screen-header text-center">I'm a React developer, and Frontend engineer.</p>
                                 <ul class="skillsets d-flex gap-3 mb-3 text-muted overflow-scroll">
                                     <li v-for="skill in skillsets" :key="skill.name" class="d-flex align-items-center gap-2">
                                         <i class="fa-brands fs-5" :class="[skill.icon]"></i>
