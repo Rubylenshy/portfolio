@@ -111,6 +111,12 @@
             </div>
         </section>
 
+        <section class="client-and-collaborators py-5">
+            <div class="max-screen-size">
+                <h2 class="home-header">GET IN TOUCH</h2>
+            </div>
+        </section>
+
         <section ref="contact" class="home-contact">
             <div class="contact-container text-center py-5 px-3 px-md-4">
                 <h2 class="home-header">GET IN TOUCH</h2>
