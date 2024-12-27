@@ -113,7 +113,7 @@
 
         <section class="client-and-collaborators py-5">
             <div class="max-screen-size">
-                <h2 class="home-header">GET IN TOUCH</h2>
+                <h2 class="home-header">Client & Collaborators</h2>
             </div>
         </section>
 
