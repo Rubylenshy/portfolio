@@ -62,7 +62,7 @@
             <section class="home-hero h-100vh">
                 <div ref="heroContent" class="home-hero-content position-relative">
                     <div class="max-screen-size">
-                        <div id="hero-header" class="home-hero-header home-header text-center fw-black" v-html="headerName"></div>
+                        <div id="hero-header" class="home-hero-header home-header size-md text-center fw-black" v-html="headerName"></div>
     
                         <div class="home-headshot p-3">
                             <img class="d-flex d-md-none mx-auto" src="/images/headshot.jpg" alt="Reuben Oluwafemi" />
@@ -88,7 +88,7 @@
         <section class="home-projects py-5">
             <div class="max-screen-size">
                 <div class="text-center py-4">
-                    <h2 class="home-header text-dark">projects.</h2>
+                    <h2 class="home-header size-sm text-dark">projects.</h2>
                 </div>
                 <div class="projects-container p-3 p-md-5">
                     <div
@@ -113,13 +113,15 @@
 
         <section class="client-and-collaborators py-5">
             <div class="max-screen-size">
-                <h2 class="home-header">Client & Collaborators</h2>
+                <div class="p-3 p-md-5">
+                    <h2 class="home-header size-sx">Clients & <br> Collaborators</h2>
+                </div>
             </div>
         </section>
 
         <section ref="contact" class="home-contact">
             <div class="contact-container text-center py-5 px-3 px-md-4">
-                <h2 class="home-header">GET IN TOUCH</h2>
+                <h2 class="home-header size-md">GET IN TOUCH</h2>
                 <h2>Interested in collaborating with me?</h2>
                 <p class="mx-auto">I’m always open to discussing web design and development work or partnership opportunities.</p>
                 <router-link to="/contact">
