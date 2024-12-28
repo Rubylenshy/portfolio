@@ -76,9 +76,18 @@ p {
 .home-header {
     font-family: var(--ff-monseal);
     font-weight: 900;
-    font-size: clamp(2.5rem, 10vw, 12rem);
     color: #efd3b1;
     line-height: 0.75em;
+
+    &.size-sx{
+        font-size: clamp(1.5rem, 4vw, 6rem);
+    }
+    &.size-sm{
+        font-size: clamp(2.5rem, 8vw, 8rem);
+    }
+    &.size-md{
+        font-size: clamp(2.5rem, 10vw, 12rem);
+    }
 }
 .portfolio-container {
     margin: 0 auto;
@@ -337,9 +346,6 @@ p {
     background-color: #0e1016;
 }
 .home-projects {
-    .home-header {
-        font-size: clamp(2.5rem, 8vw, 8rem);
-    }
     .projects-container {
         max-width: 1550px;
         display: grid;
