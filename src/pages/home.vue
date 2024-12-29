@@ -113,7 +113,7 @@
 
         <section class="client-and-collaborators py-5">
             <div class="max-screen-size">
-                <div class="p-3 p-md-5">
+                <div class="px-3 px-md-5">
                     <h2 class="home-header size-sx">Clients & <br> Collaborators</h2>
                 </div>
             </div>
