@@ -114,7 +114,7 @@
         <section class="client-and-collaborators py-5">
             <div class="max-screen-size">
                 <div class="px-3 px-md-5">
-                    <h2 class="home-header size-sx">Clients & <br> Collaborators</h2>
+                    <h2 class="home-header size-sx"><span class=" fw-light">Clients &</span> <br> Collaborators</h2>
                 </div>
             </div>
         </section>
