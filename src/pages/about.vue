@@ -19,24 +19,9 @@
             
         </section>
 
-        <section class="about-me p-3 my-4 mx-auto">
-            <div class="info-grid d-grid">
-                <div class="grid-item">
-                    <h2>23</h2>
-                    <span>Years Old</span>
-                </div>
-                <div class="grid-item">
-                    <h2>23</h2>
-                    <span>Years Old</span>
-                </div>
-                <div class="grid-item">
-                    <h2>23</h2>
-                    <span>Years Old</span>
-                </div>
-                <div class="grid-item">
-                    <h2>23</h2>
-                    <span>Years Old</span>
-                </div>
+        <section class="clients-and-collabs p-3 my-4 mx-auto">
+            <div class="px-3 px-md-5">
+                <h2 class="home-header size-sx"><span class="fw-light">Clients &</span> <br> Collaborators</h2>
             </div>
         </section>
 
