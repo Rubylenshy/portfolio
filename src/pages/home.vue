@@ -38,7 +38,7 @@
                 const { innerHeight, innerWidth } = window;
 
                 return top >= 0 && left >= 0 && bottom <= innerHeight && right <= innerWidth;
-            },
+            }
         },
         mounted() {
             this.headerName = `REUBEN <br> OLUWAFEMI`;
@@ -51,6 +51,10 @@
                 maskedSection.classList.add('curtain-hide');
                 this.loaded = true;
             }, 500);
+
+            const scrollContent = document.querySelector('.scroll-content');
+            const clone = scrollContent.cloneNode(true);
+            scrollContent.parentElement.appendChild(clone);
         },
     }
 </script>
@@ -59,39 +63,73 @@
     <div v-show="loaded" ref="homePage" class="position-relative">
         <nav-bar />
 
-        <div class="home-page">
-            <section class="home-hero h-100vh">
-                <div ref="heroContent" class="home-hero-content position-relative">
-                    <div class="max-screen-size">
-                        <div id="hero-header" class="home-hero-header home-header size-md text-center fw-black" v-html="headerName"></div>
-                        <div class="scroll-container position-relative overflow-hidden">
-                            <div class="scroll-content">
-                                <div v-for="i in 10" :key="i" class="item">Item {{ i }}</div>
-                            </div>
-                        </div>
-                        <div class="home-headshot d-none d-md-flex flex-column flex-md-row justify-content-between p-4">
-                            <p>I'm a React developer, and Frontend engineer.</p>
-                            <p>Contributing to communities by developing problem-solving products</p>
-                        </div>
+        <section class="home-hero h-100vh">
+            <div ref="heroContent" class="home-hero-content position-relative">
+                <div class="max-screen-size">
+                    <div id="hero-header" class="home-hero-header home-header size-md text-center fw-black" v-html="headerName"></div>
 
-                        <div class="home-headshot p-3">
-                            <img class="d-flex d-md-none mx-auto" src="/images/headshot.jpg" alt="Reuben Oluwafemi" />
-                            <div class="d-block d-md-none pt-3">
-                                <p class="small-screen-header text-center">I'm a React developer, and Frontend engineer.</p>
-                                <ul class="skillsets d-flex gap-3 mb-3 text-muted overflow-scroll">
-                                    <li v-for="skill in skillsets" :key="skill.name" class="d-flex align-items-center gap-2">
-                                        <i class="fa-brands fs-5" :class="[skill.icon]"></i>
-                                        <span>{{ skill.name }}</span>
-                                    </li>
-                                </ul>
-                            </div>
+                    <div class="home-headshot d-flex d-md-none flex-column align-items-center p-3 pb-0">
+                        <img class="mx-auto" src="/images/headshot.jpg" alt="Reuben Oluwafemi" />
+                        <p class="small-screen-header text-center">Designer, React developer & Frontend engineer.</p>
+                    </div>
+                    <div class="scroll-container d-block d-md-none pt-3">
+                        <div class="d-flex gap-5">
+                            <ul class="scroll-content skillsets d-flex gap-3 mb-3 text-muted">
+                                <li v-for="skill in skillsets" :key="skill.name" class="d-flex align-items-center gap-2">
+                                    <i class="fa-brands fs-5" :class="[skill.icon]"></i>
+                                    <span>{{ skill.name }}</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
+
+        <div class="home-title-divider d-none d-md-flex mx-auto rounded-3 shadow-sm">
+            <!-- <p>I'm a React developer, and Frontend engineer.</p>
+            <p>Contributing to communities by developing problem-solving products</p> -->
+            <div class="column">
+                <span><i class="fa-solid fa-layer-group"></i></span>
+                <h1 class="title">Designer</h1>
+                <p>With eye for visual appealing design, I value simple content structure and thoughtful user experiences.</p>
+                <div>
+                    <p class="list-title">Things I enjoy designing:</p>
+                    <p>Web, Apps, Logos, </p>
+                </div>
+                <div>
+                    <p class="list-title">Tools:</p>
+                    <ul>
+                        <li>Adobe Photoshop</li>
+                        <li>Figma</li>
+                        <li>Pen &amp; Paper</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column">
+                <span><i class="fa-solid fa-terminal"></i></span>
+                <h1 class="title is-size-4 is-spaced">Frontend Engineer</h1>
+                <p>I like to code things from scratch, and enjoy bringing ideas to life in the browser.</p>
+                <div>
+                    <p class="list-title">I speak:</p>
+                    <p>Javascript, PHP, Sass, Git, SCSS</p>
+                </div>
+                <div>
+                    <p class="list-title">Dev Tools:</p>
+                    <ul>
+                        <li>Bitbucket</li>
+                        <li>Bootstrap</li>
+                        <li>GSAP</li>
+                        <li>Github</li>
+                        <li>Netlify</li>
+                        <li>XAMPP</li>
+                        <li>VS Code</li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
-        <section class="home-projects py-5">
+        <section class="home-projects pb-5">
             <div class="max-screen-size">
                 <div class="text-center py-4">
                     <h2 class="home-header size-sm text-dark">projects.</h2>
@@ -101,8 +139,8 @@
                         v-for="project in projects"
                         :key="project.title"
                         class="project-item position-relative"
-                        :style="{ backgroundImage: 'url(' + project.images[0] + ')' }"
                     >
+                        <img :src="project.images[0]" :alt="project.title" class="project-image" />
                         <div class="overlay d-flex flex-column align-items-center justify-content-center position-absolute text-center p-3">
                             <p class="text-white">{{ project.description }}</p>
                             <a :href="project.live_link" target="_blank" class="btn a-btn d-flex align-items-center text-white">Visit Website <i class="fa-solid fa-square-arrow-up-right ms-2 fs-5"></i></a>
@@ -117,11 +155,9 @@
             </div>
         </section>
 
-        <section class="client-and-collaborators py-5">
-            <div class="max-screen-size">
-                <div class="px-3 px-md-5">
-                    <h2 class="home-header size-sx"><span class="fw-light">Clients &</span> <br> Collaborators</h2>
-                </div>
+        <section class="stacks-and-tools bg-black py-5">
+            <div class="max-screen-size p-3 p-md-5">
+                <h2 class="home-header size-sx">"I create intuitive, visually stunning user interfaces that enhance user experience and design."</h2>
             </div>
         </section>
 
