@@ -26,10 +26,6 @@ export default {
         script.async = true;
         script.charset = "utf-8";
         document.body.appendChild(script);
-
-        script.onload = () => {
-            console.log("Contra SDK loaded successfully");
-        };
     },
 };
 </script>
