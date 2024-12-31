@@ -26,7 +26,8 @@
                     { name: 'Sass', icon: 'fa-sass' },
                     { name: 'Bootstrap', icon: 'fa-bootstrap' },
                     { name: 'PHP', icon: 'fa-php' }
-                ]
+                ],
+                
             }
         },
         computed: {
@@ -45,17 +46,17 @@
             this.loaded = false;
 
             const maskedSection = this.$refs.maskedSection;
-            maskedSection.classList.add('reveal');
-            // Add class to start the unveiling effect
+            // Add class to start the hiding effect
             setTimeout(() => {
+                maskedSection.classList.add('curtain-hide');
                 this.loaded = true;
-            }, 5000);
+            }, 500);
         },
     }
 </script>
 
 <template>
-    <div v-if="loaded" ref="homePage" class="position-relative">
+    <div v-show="loaded" ref="homePage" class="position-relative">
         <nav-bar />
 
         <div class="home-page">
@@ -63,13 +64,18 @@
                 <div ref="heroContent" class="home-hero-content position-relative">
                     <div class="max-screen-size">
                         <div id="hero-header" class="home-hero-header home-header size-md text-center fw-black" v-html="headerName"></div>
-    
+                        <div class="scroll-container position-relative overflow-hidden">
+                            <div class="scroll-content">
+                                <div v-for="i in 10" :key="i" class="item">Item {{ i }}</div>
+                            </div>
+                        </div>
+                        <div class="home-headshot d-none d-md-flex flex-column flex-md-row justify-content-between p-4">
+                            <p>I'm a React developer, and Frontend engineer.</p>
+                            <p>Contributing to communities by developing problem-solving products</p>
+                        </div>
+
                         <div class="home-headshot p-3">
                             <img class="d-flex d-md-none mx-auto" src="/images/headshot.jpg" alt="Reuben Oluwafemi" />
-                            <div class="d-none d-md-flex flex-column flex-md-row justify-content-between p-4">
-                                <p>I'm a frontend developer, and JavaScript engineer.</p>
-                                <p>Contributing to communities by developing problem-solving products</p>
-                            </div>
                             <div class="d-block d-md-none pt-3">
                                 <p class="small-screen-header text-center">I'm a React developer, and Frontend engineer.</p>
                                 <ul class="skillsets d-flex gap-3 mb-3 text-muted overflow-scroll">
@@ -133,10 +139,10 @@
         <footer-comp />
     </div>
 
-    <div v-else ref="maskedSection" class="masked-section">
+    <div ref="maskedSection" class="masked-section">
         <div class="masked-background">
             <div class="content">
-                <img class="loader-icon" src="/images/logo1.png" alt="Reuben Oluwafemi" style="width: 80px; height: 80px;"/>
+                <img class="loader-icon" src="/images/logo1.png" alt="Reuben Oluwafemi" style="width: 60px; height: 60px;"/>
             </div>
         </div>
     </div>
