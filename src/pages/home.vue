@@ -42,29 +42,28 @@
                         icon: "fa-solid fa-terminal",
                         description: "I like to code things from scratch, and enjoy bringing ideas to life in the browser.",
                         highlights: {
-                        "I speak": ["JavaScript", "PHP", "Sass", "Git"],
+                            "I speak": ["JavaScript", "PHP", "Sass", "Git"],
                         },
                         tools: [
-                        "Bitbucket",
-                        "Bootstrap",
-                        "Trello",
-                        "GitHub",
-                        "Netlify",
-                        "Docker",
-                        "VS Code",
+                            "Bitbucket",
+                            "Bootstrap",
+                            "Trello",
+                            "GitHub",
+                            "Netlify",
+                            "Docker",
+                            "VS Code",
                         ],
                     },
                     {
                         role: "WordPress Plugin Developer",
                         icon: "fa-brands fa-wordpress-simple",
-                        description:
-                        "I specialize in creating robust, scalable plugins that deliver custom solutions for diverse needs.",
+                        description: "I specialize in creating robust, scalable plugins that deliver custom solutions for diverse needs.",
                         highlights: {
-                        "Plugins I enjoy developing": [
-                            "SEO Enhancements",
-                            "E-commerce Add-ons",
-                            "Custom Widgets",
-                        ],
+                            "Plugins I enjoy developing": [
+                                "SEO Enhancements",
+                                "E-commerce Add-ons",
+                                "Custom Widgets",
+                            ],
                         },
                         tools: ["PHP", "JavaScript", "WordPress Codex", "VS Code", "XAMPP"],
                     }
