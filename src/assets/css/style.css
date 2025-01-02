@@ -19,6 +19,7 @@
     --clr-1: #00c853;
     --clr-2: #e0e0e0;
     --clr-3: #424242;
+    --clr-4: #4169E1;
 
     --borderr-200: 10px;
     --borderr-300: 15px;
@@ -238,7 +239,6 @@ p {
 .home-hero {
     background: url(../../../public/images/bg-hero-section.jpg) no-repeat;
     background-size: cover;
-    padding-bottom: 250px;
     /* mix-blend-mode: color-burn; */
 
     .home-hero-header {
@@ -251,6 +251,7 @@ p {
     .home-hero-content {
         margin: 0 auto;
         padding-top: 120px;
+        padding-bottom: 250px;
         -webkit-backdrop-filter: blur(15px);
         backdrop-filter: blur(15px);
 
@@ -314,6 +315,7 @@ p {
     width: 80%;
     background-color: #ffffff;
     padding: 50px 20px;
+    border: 1px solid #67676733;
 
     .column {
         text-align: center;
@@ -330,14 +332,15 @@ p {
             width: 60px;
             height: 60px;
             margin: 0 auto 20px;
-            background-color: var(--clr-bisque-400);
+            background-color: var(--clr-4);
             i{
                 font-size: 1.5rem;
+                color: #ffffff;
             }
         }
 
         p{
-            width: 80%;
+            width: 70%;
             margin: 0 auto 10px;
             font-size: 1rem;
         }
@@ -347,7 +350,7 @@ p {
             color: rgba(26, 26, 26);
         }
         .list-title {
-            color: var(--clr-1);
+            color: var(--clr-4);
         }
     }
 }
@@ -402,6 +405,8 @@ p {
     background-color: #0e1016;
 }
 .home-projects {
+    transform: translateY(-100px);
+
     .projects-container {
         max-width: 1550px;
         display: grid;
