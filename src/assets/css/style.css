@@ -11,15 +11,29 @@
     --ff-monseal: "Menseal", sans-serif;
     --fst-normal: normal;
     --fst-italic: italic;
+    /*
+        Color Combo:
+        Primary Focus: Use bisque for headings, buttons, or large blocks of color.
+        Accent & Contrast: Leverage the blue shades for links, accents, and hover effects.
+        Neutral Support: gray for backgrounds, borders, or secondary text.
+    */
 
+    /* Primary Color*/
+    --clr-bisque-800: #af8148;
     --clr-bisque-600: #caa372;
     --clr-bisque-400: #ffdeb6;
     --clr-bisque-300: #f1dbc0;
 
-    --clr-1: #00c853;
-    --clr-2: #e0e0e0;
-    --clr-3: #424242;
-    --clr-4: #4169E1;
+    /* Secondary Color */
+    --clr-secondary-600: #5271ff;
+    --clr-secondary-400: #8da7ff;
+    --clr-secondary-300: #ccd8ff;
+
+    /* Neutral Color */
+    --clr-neutral-800: #2e2e2e;
+    --clr-neutral-600: #6c6c6c;
+    --clr-neutral-400: #b8b8b8;
+    --clr-neutral-200: #f2f2f2;
 
     --borderr-200: 10px;
     --borderr-300: 15px;
@@ -81,7 +95,7 @@ p {
 .home-header {
     font-family: var(--ff-monseal);
     font-weight: 900;
-    color: #efd3b1;
+    color: var(--clr-bisque-300);
     line-height: 0.75em;
 
     &.size-sx {
@@ -321,7 +335,7 @@ p {
         text-align: center;
         width: 50%;
         &:first-child {
-            border-right: 1px solid var(--clr-3);
+            border-right: 1px solid var(--clr-neutral-400);
         }
         span{
             display: flex;
@@ -332,7 +346,7 @@ p {
             width: 60px;
             height: 60px;
             margin: 0 auto 20px;
-            background-color: var(--clr-4);
+            background-color: var(--clr-secondary-600);
             i{
                 font-size: 1.5rem;
                 color: #ffffff;
@@ -347,10 +361,10 @@ p {
         .title {
             font-size: clamp(1.25rem, 4vw, 1.4rem);
             font-weight: 700;
-            color: rgba(26, 26, 26);
+            color: var(--clr-neutral-800);
         }
         .list-title {
-            color: var(--clr-4);
+            color: var(--clr-secondary-600);
         }
     }
 }
@@ -466,7 +480,7 @@ p {
         .after {
             width: 45%;
             height: 2px;
-            background-color: #efd3b1;
+            background-color: var(--clr-bisque-400);
         }
     }
 }
@@ -503,7 +517,7 @@ p {
 .about-page {
     .about-intro-hero {
         padding: 140px 0;
-        background-color: #f4f4f4;
+        background-color: var(--clr-secondary-300);
         .intro-hero-texts {
             p {
                 font-size: clamp(1.8rem, 6vw, 3.5rem);
@@ -519,7 +533,7 @@ p {
         }
 
         .custom-text-digital {
-            background-color: #efd3b1;
+            background-color: var(--clr-bisque-400);
         }
     }
     .about-me {
@@ -592,8 +606,8 @@ p {
 
 /* Footer */
 .footer {
-    background-color: #f5f5f5;
-    color: #757575;
+    background-color: var(--clr-neutral-200);
+    color: var(--clr-neutral-600);
     padding: 40px 5%;
 
     .scroll-to-top {
@@ -612,10 +626,10 @@ p {
 
     .footer-links {
         a {
-            color: #757575;
+            /* color: var(--clr-neutral-600); */
 
             &:hover {
-                color: var(--clr-bisque-400);
+                color: var(--clr-bisque-800);
             }
         }
     }
