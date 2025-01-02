@@ -27,7 +27,48 @@
                     { name: 'Bootstrap', icon: 'fa-bootstrap' },
                     { name: 'PHP', icon: 'fa-php' }
                 ],
-                
+                homeDetails: [
+                    // {
+                    //     role: "Designer",
+                    //     icon: "fa-solid fa-layer-group",
+                    //     description: "With eye for visual appealing design, I value simple content structure and thoughtful user experiences.",
+                    //     highlights: {
+                    //     "Things I enjoy designing": ["Web", "Apps", "Logos"],
+                    //     },
+                    //     tools: ["Adobe Photoshop", "Figma", "Pen & Paper"],
+                    // },
+                    {
+                        role: "Frontend Engineer",
+                        icon: "fa-solid fa-terminal",
+                        description: "I like to code things from scratch, and enjoy bringing ideas to life in the browser.",
+                        highlights: {
+                        "I speak": ["JavaScript", "PHP", "Sass", "Git"],
+                        },
+                        tools: [
+                        "Bitbucket",
+                        "Bootstrap",
+                        "Trello",
+                        "GitHub",
+                        "Netlify",
+                        "Docker",
+                        "VS Code",
+                        ],
+                    },
+                    {
+                        role: "WordPress Plugin Developer",
+                        icon: "fa-brands fa-wordpress-simple",
+                        description:
+                        "I specialize in creating robust, scalable plugins that deliver custom solutions for diverse needs.",
+                        highlights: {
+                        "Plugins I enjoy developing": [
+                            "SEO Enhancements",
+                            "E-commerce Add-ons",
+                            "Custom Widgets",
+                        ],
+                        },
+                        tools: ["PHP", "JavaScript", "WordPress Codex", "VS Code", "XAMPP"],
+                    }
+                ]
             }
         },
         computed: {
@@ -87,49 +128,26 @@
         </section>
 
         <div class="home-title-divider d-none d-md-flex mx-auto rounded-3 shadow-sm">
-            <!-- <p>I'm a React developer, and Frontend engineer.</p>
-            <p>Contributing to communities by developing problem-solving products</p> -->
-            <div class="column">
-                <span><i class="fa-solid fa-layer-group"></i></span>
-                <h1 class="title">Designer</h1>
-                <p>With eye for visual appealing design, I value simple content structure and thoughtful user experiences.</p>
-                <div>
-                    <p class="list-title">Things I enjoy designing:</p>
-                    <p>Web, Apps, Logos, </p>
+            <div v-for="(item, index) in homeDetails" :key="index" class="column">
+                <span><i :class="item.icon"></i></span>
+                <h1 class="title">{{ item.role }}</h1>
+                <p>{{ item.description }}</p>
+                
+                <div v-for="(value, key) in item.highlights" :key="key" class="my-4">
+                    <p class="list-title fw-bold">{{ key }}:</p>
+                    <p>{{ value.join(', ') }}</p>
                 </div>
-                <div>
-                    <p class="list-title">Tools:</p>
+                
+                <div class="my-4">
+                    <p class="list-title fw-bold">Tools:</p>
                     <ul>
-                        <li>Adobe Photoshop</li>
-                        <li>Figma</li>
-                        <li>Pen &amp; Paper</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="column">
-                <span><i class="fa-solid fa-terminal"></i></span>
-                <h1 class="title is-size-4 is-spaced">Frontend Engineer</h1>
-                <p>I like to code things from scratch, and enjoy bringing ideas to life in the browser.</p>
-                <div>
-                    <p class="list-title">I speak:</p>
-                    <p>Javascript, PHP, Sass, Git, SCSS</p>
-                </div>
-                <div>
-                    <p class="list-title">Dev Tools:</p>
-                    <ul>
-                        <li>Bitbucket</li>
-                        <li>Bootstrap</li>
-                        <li>GSAP</li>
-                        <li>Github</li>
-                        <li>Netlify</li>
-                        <li>XAMPP</li>
-                        <li>VS Code</li>
+                        <li v-for="(tool, toolIndex) in item.tools" :key="toolIndex">{{ tool }}</li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <section class="home-projects pb-5">
+        <section class="home-projects">
             <div class="max-screen-size">
                 <div class="text-center py-4">
                     <h2 class="home-header size-sm text-dark">projects.</h2>
@@ -147,7 +165,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-flex justify-content-center pb-4">
+                <div class="d-flex justify-content-center">
                     <router-link to="/projects">
                         <button class="btn a-btn"><i class="fa-solid fa-briefcase"></i> See more on the projects page</button>
                     </router-link>
@@ -155,7 +173,7 @@
             </div>
         </section>
 
-        <section class="stacks-and-tools bg-black py-5">
+        <section class="stacks-and-tools bg-black py-5 mb-5">
             <div class="max-screen-size p-3 p-md-5">
                 <h2 class="home-header size-sx">"I create intuitive, visually stunning user interfaces that enhance user experience and design."</h2>
             </div>
