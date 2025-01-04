@@ -7,10 +7,13 @@
                 </router-link>
             </div>
             <div class="nav-links">
-                <ul class="d-flex nav-links-lists fw-semibold gap-4 gap-xl-5">
+                <ul class="d-flex align-items-center nav-links-lists fw-semibold gap-4 gap-xl-5">
                     <li v-for="link in navLinks" :key="link.value">
                         <router-link :to="link.value" active-class="active-nav-desktop-link">{{ (link.label).toUpperCase() }}</router-link>
                     </li>
+                    <a class="fs-6 text-white a-btn" href="https://drive.google.com/file/d/1ZPy351Ss6irkWBbvqAfr9_aESvD50Uvh/view?usp=sharing" aria-label="View Resume" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-filetype-pdf"></i> View Resume 
+                    </a>
                 </ul>
             </div>
         </div>
@@ -33,7 +36,7 @@
         </router-link>
         <div class="d-flex align-items-center gap-3">
             <contra-button />
-            <a href="https://github.com/Rubylenshy"><i class="fa-brands fa-github fs-5 text-light"></i></a>
+            <a href="https://github.com/Rubylenshy" target="_blank"><i class="fa-brands fa-github fs-5 text-light"></i></a>
         </div>
     </div>
 </template>
@@ -53,7 +56,7 @@
             return {
                 navLinks: [
                     {label: 'Home', value: '/'},
-                    {label: 'About', value: '/about'},
+                    // {label: 'About', value: '/about'},
                     {label: 'Projects', value: '/projects'},
                     {label: 'Contact', value: '/contact'},
                     // {label: 'Articles', value: 'articles'}
