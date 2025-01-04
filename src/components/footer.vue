@@ -9,7 +9,7 @@
                 </div>
                 <ul class="footer-links d-flex gap-4 justify-content-center">
                     <li v-for="link in socialLinks" :key="link">
-                        <a :href="link.href"><i class="fs-5" :class="[link.icon]"></i></a>
+                        <a :href="link.href" aria-label="Social Link"><i class="fs-5" :class="[link.icon]"></i></a>
                     </li>
                 </ul>
             </div>
