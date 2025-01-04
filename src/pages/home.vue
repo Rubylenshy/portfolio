@@ -27,6 +27,7 @@
                     { name: 'Bootstrap', icon: 'fa-bootstrap' },
                     { name: 'PHP', icon: 'fa-php' }
                 ],
+                frontendTerms: ['JavaScript Frameworks', 'Debugging', 'Mobile-First Development', 'State Management', 'Responsiveness', 'Version Control', 'API Integrations'],
                 homeDetails: [
                     // {
                     //     role: "Designer",
@@ -129,7 +130,7 @@
         <div class="home-title-divider d-none d-md-flex mx-auto rounded-3 shadow-sm">
             <div v-for="(item, index) in homeDetails" :key="index" class="column">
                 <span><i :class="item.icon"></i></span>
-                <h1 class="title">{{ item.role }}</h1>
+                <h1 class="title home-header fs-4">{{ item.role }}</h1>
                 <p>{{ item.description }}</p>
                 
                 <div v-for="(value, key) in item.highlights" :key="key" class="my-4">
@@ -148,7 +149,7 @@
 
         <section class="home-projects">
             <div class="max-screen-size">
-                <div class="text-center py-4">
+                <div class="text-center pt-5 pt-md-4 pb-4">
                     <h2 class="home-header size-sm text-dark">projects.</h2>
                 </div>
                 <div class="projects-container p-3 p-md-5">
@@ -164,7 +165,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-flex justify-content-center">
+                <div class="d-flex justify-content-center pb-4 pb-md-0">
                     <router-link to="/projects">
                         <button class="btn a-btn"><i class="fa-solid fa-briefcase"></i> See more on the projects page</button>
                     </router-link>
@@ -175,6 +176,26 @@
         <section class="stacks-and-tools bg-black py-5 mb-5">
             <div class="max-screen-size p-3 p-md-5">
                 <h2 class="home-header size-sx">"I create intuitive, visually stunning user interfaces that enhance user experience and design."</h2>
+                <div class="d-flex flex-column flex-md-row gap-3 pt-5">
+                    <div class="text-container">
+                        <p class="fs-5">I am a Front-end Developer with 4 years commercial experience, and graduate of Mathematics. I build user-interfaces for commercial websites, wordpress plugins and themes.</p>
+                        <p class="fs-5">I'm currently working on a number of amazing projects that I can't wait to share with you.</p>
+                        <div class="text-tools d-flex flex-column flex-md-row gap-3">
+                            <div class="frontend-tools">
+                                <h2 class="home-header fs-4">Frontend Tools</h2>
+                                <p class="fs-5"></p>
+                            </div>
+                            <div class="frontend-tools">
+                                <h2 class="home-header fs-4">Products</h2>
+                                <p class="fs-5"></p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="terms-container gap-2">
+                        <h3 v-for="term in frontendTerms" :key="term" class="term-title m-0 fw-light">{{ term }}</h3>
+                    </div>
+                </div>
             </div>
         </section>
 
