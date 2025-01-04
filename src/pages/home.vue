@@ -111,7 +111,7 @@
 
                     <div class="home-headshot d-flex d-md-none flex-column align-items-center p-3 pb-0">
                         <img class="mx-auto" src="/images/headshot.jpg" alt="Reuben Oluwafemi" />
-                        <p class="small-screen-header text-center">Designer, React developer & Frontend engineer.</p>
+                        <p class="small-screen-header text-center">Wordpress Plugin Developer & Frontend Engineer.</p>
                     </div>
                     <div class="scroll-container d-block d-md-none pt-3">
                         <div class="d-flex gap-5">
@@ -127,22 +127,24 @@
             </div>
         </section>
 
-        <div class="home-title-divider d-none d-md-flex mx-auto rounded-3 shadow-sm">
-            <div v-for="(item, index) in homeDetails" :key="index" class="column">
-                <span><i :class="item.icon"></i></span>
-                <h1 class="title home-header fs-4">{{ item.role }}</h1>
-                <p>{{ item.description }}</p>
-                
-                <div v-for="(value, key) in item.highlights" :key="key" class="my-4">
-                    <p class="list-title fw-bold">{{ key }}:</p>
-                    <p>{{ value.join(', ') }}</p>
-                </div>
-                
-                <div class="my-4">
-                    <p class="list-title fw-bold">Tools:</p>
-                    <ul>
-                        <li v-for="(tool, toolIndex) in item.tools" :key="toolIndex">{{ tool }}</li>
-                    </ul>
+        <div class="max-screen-size">
+            <div class="home-title-divider d-none d-md-flex mx-auto rounded-3 shadow-sm">
+                <div v-for="(item, index) in homeDetails" :key="index" class="column">
+                    <span><i :class="item.icon"></i></span>
+                    <h1 class="title home-header fs-4">{{ item.role }}</h1>
+                    <p>{{ item.description }}</p>
+                    
+                    <div v-for="(value, key) in item.highlights" :key="key" class="my-4">
+                        <p class="list-title fw-bold">{{ key }}:</p>
+                        <p>{{ value.join(', ') }}</p>
+                    </div>
+                    
+                    <div class="my-4">
+                        <p class="list-title fw-bold">Tools:</p>
+                        <ul>
+                            <li v-for="(tool, toolIndex) in item.tools" :key="toolIndex">{{ tool }}</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -176,18 +178,18 @@
         <section class="stacks-and-tools bg-black py-5 mb-5">
             <div class="max-screen-size p-3 p-md-5">
                 <h2 class="home-header size-sx">"I create intuitive, visually stunning user interfaces that enhance user experience and design."</h2>
-                <div class="d-flex flex-column flex-md-row gap-3 pt-5">
+                <div class="d-flex flex-column flex-md-row gap-3 gap-md-4 pt-5">
                     <div class="text-container">
-                        <p class="fs-5">I am a Front-end Developer with 4 years commercial experience, and graduate of Mathematics. I build user-interfaces for commercial websites, wordpress plugins and themes.</p>
-                        <p class="fs-5">I'm currently working on a number of amazing projects that I can't wait to share with you.</p>
+                        <p class="fs-5 text-justify">I am a Front-end Developer with 4 years commercial experience, and graduate of Mathematics. I build user-interfaces for commercial websites, wordpress plugins and themes.</p>
+                        <p class="fs-5 text-justify">I'm currently working on a number of amazing projects that I can't wait to share with you.</p>
                         <div class="text-tools d-flex flex-column flex-md-row gap-3">
                             <div class="frontend-tools">
-                                <h2 class="home-header fs-4">Frontend Tools</h2>
-                                <p class="fs-5"></p>
+                                <h2 class="home-header fs-4">Frontend Stack</h2>
+                                <p class="fs-6">VueJS, ReactJS, Next.js, JavaScript (ES6+), PHP, DevTools, Bootstrap, SCSS, HTML5, MySQL, Git/GitHub.</p>
                             </div>
                             <div class="frontend-tools">
-                                <h2 class="home-header fs-4">Products</h2>
-                                <p class="fs-5"></p>
+                                <h2 class="home-header fs-4">Tools</h2>
+                                <p class="fs-6">VS Code, CodeSandbox, Wordpress, Vercel, Bitbucket, Figma, Notion, Trello, Canva, Adobe Photoshop.</p>
                             </div>
                         </div>
 
