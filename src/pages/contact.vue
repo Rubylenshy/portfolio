@@ -18,7 +18,7 @@
             <div class="contact-container d-flex flex-column justify-content-center text-stsrt py-5 px-3 px-md-4">
                 <h2 class="home-header size-md text-dark">Get in touch</h2>
                 <strong class="fs-5 lh-sm my-3">Currently seeking new opportunities</strong>
-                <p class="fs-6 mb-0">I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.</p>
+                <p class="fs-6 mb-0">I’m excited to connect with individuals and businesses looking to bring their ideas to life! I specialize in crafting tailored solutions that drive results. Let’s create something amazing together—whether it’s a new project, partnership, or simply sharing ideas. I look forward to hearing from you!</p>
             </div>
         </div>
 
@@ -219,7 +219,14 @@ export default {
                 subject: '',
                 message: '',
             }
+        },
+        scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
         }
-    }
+    },
+    mounted() {
+        this.scrollToTop()
+    },
 };
 </script>
