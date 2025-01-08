@@ -43,7 +43,7 @@
                         icon: "fa-solid fa-terminal",
                         description: "I like to code things from scratch, and enjoy bringing ideas to life in the browser.",
                         highlights: {
-                            "I speak": ["JavaScript", "PHP", "Sass", "Git"],
+                            "I speak": ["ReactJS", "VueJs", "JavaScript", "PHP", "Sass", "Git"],
                         },
                         tools: [
                             "Bitbucket",
