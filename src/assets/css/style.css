@@ -436,6 +436,9 @@ p {
 .masked-section.curtain-hide {
     clip-path: inset(0 0 100% 0); /* Hide the section */
 }
+.masked-section.d-none {
+   display: none !important;
+}
 
 /* Projects */
 .project-navbar .nav-bar .navbar-desktop {

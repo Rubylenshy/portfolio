@@ -7,9 +7,9 @@ import ContactPage from '../pages/contact.vue';
 
 const routes = [
 	{ path: '/', name: 'Home', component: HomeView, meta: { title: 'Reuben Oluwafemi | Home' }},
-    { path: '/about', name: 'About', component: AboutPage, meta: { title: 'Reuben Oluwafemi | About' }},
-    { path: '/projects', name: 'Projects', component: ProjectPage, meta: { title: 'Reuben Oluwafemi | Projects' }},
-    { path: '/contact', name: 'Contact', component: ContactPage, meta: { title: 'Reuben Oluwafemi | Contact' }},
+  { path: '/about', name: 'About', component: AboutPage, meta: { title: 'Reuben Oluwafemi | About' }},
+  { path: '/projects', name: 'Projects', component: ProjectPage, meta: { title: 'Reuben Oluwafemi | Projects' }},
+  { path: '/contact', name: 'Contact', component: ContactPage, meta: { title: 'Reuben Oluwafemi | Contact' }},
 ];
 
 const router = createRouter({

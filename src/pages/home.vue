@@ -9,12 +9,9 @@
             NavBar,
             FooterComp
         },
-        props: {
-            
-        },
         data() {
             return {
-                loaded: false,
+                isCurtainDisabled: false,
                 headerName: '',
                 projects: projectsData,
                 skillsets: [
@@ -79,29 +76,42 @@
                 const { innerHeight, innerWidth } = window;
 
                 return top >= 0 && left >= 0 && bottom <= innerHeight && right <= innerWidth;
+            },
+            loadCurtain() {
+                const storedCurtainStatus = localStorage.getItem('isCurtainDisabled');
+                
+                if (storedCurtainStatus !== null) {
+                    this.isCurtainDisabled = JSON.parse(storedCurtainStatus);
+                }
+                
+                const maskedSection = this.$refs.maskedSection;
+
+                if (this.isCurtainDisabled) {
+                    maskedSection.classList.add('d-none');
+                    return;
+                }
+
+                setTimeout(() => {
+                    maskedSection.classList.add('curtain-hide');
+                    this.isCurtainDisabled = true;
+                    localStorage.setItem('isCurtainDisabled', JSON.stringify(this.isCurtainDisabled));
+                }, 500);
             }
         },
         mounted() {
             this.headerName = `REUBEN <br> OLUWAFEMI`;
 
-            this.loaded = false;
-
-            const maskedSection = this.$refs.maskedSection;
-            // Add class to start the hiding effect
-            setTimeout(() => {
-                maskedSection.classList.add('curtain-hide');
-                this.loaded = true;
-            }, 500);
-
             const scrollContent = document.querySelector('.scroll-content');
             const clone = scrollContent.cloneNode(true);
             scrollContent.parentElement.appendChild(clone);
+
+            this.loadCurtain()
         },
     }
 </script>
 
 <template>
-    <div v-show="loaded" ref="homePage" class="position-relative">
+    <div v-show="isCurtainDisabled" ref="homePage" class="position-relative">
         <nav-bar />
 
         <section class="home-hero h-100vh">
